@@ -1,6 +1,6 @@
 body {
   color: #222831;
-  font-size: calc(110% + 0.1vw);
+  font-size: 1.5vw;
   line-height: 1.6;
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
@@ -268,28 +268,28 @@ header .nav-list-item a {
 }
 
 .post-content h2 {
-  margin-top: 1.8em;
-  font-size: 2.8em;
+  margin-top: 1.5em;
+  font-size: 2.5em;
 }
 
 .post-content h3 {
-  margin-top: 1.6em;
-  font-size: 2.6em;
-}
-
-.post-content h4 {
-  margin-top: 1.4em;
-  font-size: 2.4em;
-}
-
-.post-content h5 {
   margin-top: 1.2em;
   font-size: 2.2em;
 }
 
-.post-content h6 {
+.post-content h4 {
   margin-top: 1em;
   font-size: 2em;
+}
+
+.post-content h5 {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+.post-content h6 {
+  margin-top: 0.2em;
+  font-size: 1.2em;
 }
 
 .post-content a {
