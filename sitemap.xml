@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ytetsuro.github.io/blog/2018/05/21/Chain-of-Responsibility/</loc>
+    
+    <lastmod>2018-05-21T16:03:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ytetsuro.github.io/blog/2018/05/20/Builder/</loc>
     
     <lastmod>2018-05-20T20:47:36.000Z</lastmod>
