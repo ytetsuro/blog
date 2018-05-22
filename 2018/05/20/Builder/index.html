@@ -72,7 +72,7 @@ var disqus_url = 'https://ytetsuro.github.io/blog/2018/05/20/Builder/';
         if(window.twttr && container.querySelector('.twitter-share-button')) {
            twttr.widgets.load()
         }
-        if (Hatena.Bookmark && container.querySelector('.hatena-bookmark-button')) {
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
            Hatena.Bookmark.BookmarkButton.setup();
         }
     })
