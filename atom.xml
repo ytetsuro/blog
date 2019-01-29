@@ -5,9 +5,9 @@
   <subtitle>やったこと、しらべたこと</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://ytetsuro.github.io/blog/"/>
+  <link href="https://i.botch.me/"/>
   <updated>2018-12-03T16:00:39.000Z</updated>
-  <id>https://ytetsuro.github.io/blog/</id>
+  <id>https://i.botch.me/</id>
   
   <author>
     <name>ytetsuro</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Modelの実装</title>
-    <link href="https://ytetsuro.github.io/blog/2018/12/04/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Model%E3%81%AE%E5%AE%9F%E8%A3%85/"/>
-    <id>https://ytetsuro.github.io/blog/2018/12/04/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Modelの実装/</id>
+    <link href="https://i.botch.me/2018/12/04/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Model%E3%81%AE%E5%AE%9F%E8%A3%85/"/>
+    <id>https://i.botch.me/2018/12/04/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Modelの実装/</id>
     <published>2018-12-03T16:00:39.000Z</published>
     <updated>2018-12-03T16:00:39.000Z</updated>
     
@@ -36,18 +36,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="ci-phpunit-test" scheme="https://ytetsuro.github.io/blog/tags/ci-phpunit-test/"/>
+      <category term="ci-phpunit-test" scheme="https://i.botch.me/tags/ci-phpunit-test/"/>
     
-      <category term="CodeIgniter3" scheme="https://ytetsuro.github.io/blog/tags/CodeIgniter3/"/>
+      <category term="CodeIgniter3" scheme="https://i.botch.me/tags/CodeIgniter3/"/>
     
   </entry>
   
   <entry>
     <title>ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-依存性解決の実装</title>
-    <link href="https://ytetsuro.github.io/blog/2018/12/03/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-%E4%BE%9D%E5%AD%98%E6%80%A7%E8%A7%A3%E6%B1%BA%E3%81%AE%E5%AE%9F%E8%A3%85/"/>
-    <id>https://ytetsuro.github.io/blog/2018/12/03/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-依存性解決の実装/</id>
+    <link href="https://i.botch.me/2018/12/03/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-%E4%BE%9D%E5%AD%98%E6%80%A7%E8%A7%A3%E6%B1%BA%E3%81%AE%E5%AE%9F%E8%A3%85/"/>
+    <id>https://i.botch.me/2018/12/03/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-依存性解決の実装/</id>
     <published>2018-12-02T19:08:18.000Z</published>
     <updated>2018-12-02T19:08:18.000Z</updated>
     
@@ -64,18 +64,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="ci-phpunit-test" scheme="https://ytetsuro.github.io/blog/tags/ci-phpunit-test/"/>
+      <category term="ci-phpunit-test" scheme="https://i.botch.me/tags/ci-phpunit-test/"/>
     
-      <category term="CodeIgniter3" scheme="https://ytetsuro.github.io/blog/tags/CodeIgniter3/"/>
+      <category term="CodeIgniter3" scheme="https://i.botch.me/tags/CodeIgniter3/"/>
     
   </entry>
   
   <entry>
     <title>ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装-コンストラクタ</title>
-    <link href="https://ytetsuro.github.io/blog/2018/12/02/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Controller%E3%81%AE%E5%AE%9F%E8%A3%85-%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF/"/>
-    <id>https://ytetsuro.github.io/blog/2018/12/02/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装-コンストラクタ/</id>
+    <link href="https://i.botch.me/2018/12/02/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Controller%E3%81%AE%E5%AE%9F%E8%A3%85-%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF/"/>
+    <id>https://i.botch.me/2018/12/02/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装-コンストラクタ/</id>
     <published>2018-12-02T14:59:59.000Z</published>
     <updated>2018-12-02T19:08:01.000Z</updated>
     
@@ -92,18 +92,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="ci-phpunit-test" scheme="https://ytetsuro.github.io/blog/tags/ci-phpunit-test/"/>
+      <category term="ci-phpunit-test" scheme="https://i.botch.me/tags/ci-phpunit-test/"/>
     
-      <category term="CodeIgniter3" scheme="https://ytetsuro.github.io/blog/tags/CodeIgniter3/"/>
+      <category term="CodeIgniter3" scheme="https://i.botch.me/tags/CodeIgniter3/"/>
     
   </entry>
   
   <entry>
     <title>ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装(設計)</title>
-    <link href="https://ytetsuro.github.io/blog/2018/12/01/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Controller%E3%81%AE%E5%AE%9F%E8%A3%85-%E8%A8%AD%E8%A8%88/"/>
-    <id>https://ytetsuro.github.io/blog/2018/12/01/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装-設計/</id>
+    <link href="https://i.botch.me/2018/12/01/ci-phpunit-test%E3%82%92%E4%BD%BF%E3%81%86%E6%99%82%E3%81%AB%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84CodeIgniter3%E3%81%AE%E5%AE%9F%E8%A3%85-Controller%E3%81%AE%E5%AE%9F%E8%A3%85-%E8%A8%AD%E8%A8%88/"/>
+    <id>https://i.botch.me/2018/12/01/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Controllerの実装-設計/</id>
     <published>2018-12-01T11:24:43.000Z</published>
     <updated>2018-12-01T11:24:43.000Z</updated>
     
@@ -120,18 +120,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="ci-phpunit-test" scheme="https://ytetsuro.github.io/blog/tags/ci-phpunit-test/"/>
+      <category term="ci-phpunit-test" scheme="https://i.botch.me/tags/ci-phpunit-test/"/>
     
-      <category term="CodeIgniter3" scheme="https://ytetsuro.github.io/blog/tags/CodeIgniter3/"/>
+      <category term="CodeIgniter3" scheme="https://i.botch.me/tags/CodeIgniter3/"/>
     
   </entry>
   
   <entry>
     <title>TypeScriptのinferとは何か</title>
-    <link href="https://ytetsuro.github.io/blog/2018/10/10/TypeScript%E3%81%AEinfer%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B/"/>
-    <id>https://ytetsuro.github.io/blog/2018/10/10/TypeScriptのinferとは何か/</id>
+    <link href="https://i.botch.me/2018/10/10/TypeScript%E3%81%AEinfer%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B/"/>
+    <id>https://i.botch.me/2018/10/10/TypeScriptのinferとは何か/</id>
     <published>2018-10-10T13:59:15.000Z</published>
     <updated>2018-10-10T18:00:37.000Z</updated>
     
@@ -147,14 +147,14 @@
     </summary>
     
     
-      <category term="TypeScript" scheme="https://ytetsuro.github.io/blog/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://i.botch.me/tags/TypeScript/"/>
     
   </entry>
   
   <entry>
     <title>jsdomでinput[type=file]のファイル選択のテストを書く</title>
-    <link href="https://ytetsuro.github.io/blog/2018/10/07/jsdom%E3%81%A7input-type-file-%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E9%81%B8%E6%8A%9E%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%82%92%E6%9B%B8%E3%81%8F/"/>
-    <id>https://ytetsuro.github.io/blog/2018/10/07/jsdomでinput-type-file-のファイル選択のテストを書く/</id>
+    <link href="https://i.botch.me/2018/10/07/jsdom%E3%81%A7input-type-file-%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E9%81%B8%E6%8A%9E%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%82%92%E6%9B%B8%E3%81%8F/"/>
+    <id>https://i.botch.me/2018/10/07/jsdomでinput-type-file-のファイル選択のテストを書く/</id>
     <published>2018-10-06T18:23:45.000Z</published>
     <updated>2018-10-06T18:57:23.000Z</updated>
     
@@ -171,18 +171,18 @@
     </summary>
     
     
-      <category term="TypeScript" scheme="https://ytetsuro.github.io/blog/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://i.botch.me/tags/TypeScript/"/>
     
-      <category term="jsdom" scheme="https://ytetsuro.github.io/blog/tags/jsdom/"/>
+      <category term="jsdom" scheme="https://i.botch.me/tags/jsdom/"/>
     
-      <category term="test" scheme="https://ytetsuro.github.io/blog/tags/test/"/>
+      <category term="test" scheme="https://i.botch.me/tags/test/"/>
     
   </entry>
   
   <entry>
     <title>TypeScriptのFactoryクラスでDRYする</title>
-    <link href="https://ytetsuro.github.io/blog/2018/06/07/TypeScript%E3%81%AEFactory%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A7DRY%E3%81%99%E3%82%8B/"/>
-    <id>https://ytetsuro.github.io/blog/2018/06/07/TypeScriptのFactoryクラスでDRYする/</id>
+    <link href="https://i.botch.me/2018/06/07/TypeScript%E3%81%AEFactory%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A7DRY%E3%81%99%E3%82%8B/"/>
+    <id>https://i.botch.me/2018/06/07/TypeScriptのFactoryクラスでDRYする/</id>
     <published>2018-06-06T16:25:52.000Z</published>
     <updated>2018-06-06T18:17:40.000Z</updated>
     
@@ -198,18 +198,18 @@
     </summary>
     
     
-      <category term="Factory" scheme="https://ytetsuro.github.io/blog/tags/Factory/"/>
+      <category term="Factory" scheme="https://i.botch.me/tags/Factory/"/>
     
-      <category term="DRY" scheme="https://ytetsuro.github.io/blog/tags/DRY/"/>
+      <category term="DRY" scheme="https://i.botch.me/tags/DRY/"/>
     
-      <category term="TypeScript" scheme="https://ytetsuro.github.io/blog/tags/TypeScript/"/>
+      <category term="TypeScript" scheme="https://i.botch.me/tags/TypeScript/"/>
     
   </entry>
   
   <entry>
     <title>Composite</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/25/Composite/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/25/Composite/</id>
+    <link href="https://i.botch.me/2018/05/25/Composite/"/>
+    <id>https://i.botch.me/2018/05/25/Composite/</id>
     <published>2018-05-24T18:17:07.000Z</published>
     <updated>2018-06-19T02:07:50.000Z</updated>
     
@@ -226,18 +226,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Command</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/24/Command/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/24/Command/</id>
+    <link href="https://i.botch.me/2018/05/24/Command/"/>
+    <id>https://i.botch.me/2018/05/24/Command/</id>
     <published>2018-05-24T14:27:06.000Z</published>
     <updated>2018-05-24T18:16:16.000Z</updated>
     
@@ -253,18 +253,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Collecting Parameter</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/22/Collecting-Parameter/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/22/Collecting-Parameter/</id>
+    <link href="https://i.botch.me/2018/05/22/Collecting-Parameter/"/>
+    <id>https://i.botch.me/2018/05/22/Collecting-Parameter/</id>
     <published>2018-05-22T10:56:55.000Z</published>
     <updated>2018-05-23T05:09:06.000Z</updated>
     
@@ -281,18 +281,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="Kent Beck" scheme="https://ytetsuro.github.io/blog/tags/Kent-Beck/"/>
+      <category term="Kent Beck" scheme="https://i.botch.me/tags/Kent-Beck/"/>
     
   </entry>
   
   <entry>
     <title>Chain of Responsibility</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/21/Chain-of-Responsibility/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/21/Chain-of-Responsibility/</id>
+    <link href="https://i.botch.me/2018/05/21/Chain-of-Responsibility/"/>
+    <id>https://i.botch.me/2018/05/21/Chain-of-Responsibility/</id>
     <published>2018-05-21T13:23:12.000Z</published>
     <updated>2018-05-22T07:19:34.000Z</updated>
     
@@ -310,18 +310,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Builder</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/20/Builder/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/20/Builder/</id>
+    <link href="https://i.botch.me/2018/05/20/Builder/"/>
+    <id>https://i.botch.me/2018/05/20/Builder/</id>
     <published>2018-05-20T07:58:14.000Z</published>
     <updated>2018-05-20T20:47:36.000Z</updated>
     
@@ -338,18 +338,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Bridge</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/19/Bridge/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/19/Bridge/</id>
+    <link href="https://i.botch.me/2018/05/19/Bridge/"/>
+    <id>https://i.botch.me/2018/05/19/Bridge/</id>
     <published>2018-05-19T02:27:28.000Z</published>
     <updated>2018-05-19T14:19:26.000Z</updated>
     
@@ -367,18 +367,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Adapter</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/18/Adapter/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/18/Adapter/</id>
+    <link href="https://i.botch.me/2018/05/18/Adapter/"/>
+    <id>https://i.botch.me/2018/05/18/Adapter/</id>
     <published>2018-05-18T05:53:20.000Z</published>
     <updated>2018-05-19T12:39:01.000Z</updated>
     
@@ -396,18 +396,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Abstract Factory</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/17/Abstract-Factory/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/17/Abstract-Factory/</id>
+    <link href="https://i.botch.me/2018/05/17/Abstract-Factory/"/>
+    <id>https://i.botch.me/2018/05/17/Abstract-Factory/</id>
     <published>2018-05-17T05:34:28.000Z</published>
     <updated>2018-05-17T09:58:27.000Z</updated>
     
@@ -424,18 +424,18 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://ytetsuro.github.io/blog/tags/PHP/"/>
+      <category term="PHP" scheme="https://i.botch.me/tags/PHP/"/>
     
-      <category term="Design Pattern" scheme="https://ytetsuro.github.io/blog/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
-      <category term="GoF" scheme="https://ytetsuro.github.io/blog/tags/GoF/"/>
+      <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
     
   </entry>
   
   <entry>
     <title>Hexoを使ってGithubPagesにBlogを構築してみた</title>
-    <link href="https://ytetsuro.github.io/blog/2018/05/16/Hexo%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6Blog%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/"/>
-    <id>https://ytetsuro.github.io/blog/2018/05/16/Hexoを使ってBlogを構築してみた/</id>
+    <link href="https://i.botch.me/2018/05/16/Hexo%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6Blog%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/"/>
+    <id>https://i.botch.me/2018/05/16/Hexoを使ってBlogを構築してみた/</id>
     <published>2018-05-16T06:57:45.000Z</published>
     <updated>2018-05-16T10:39:58.000Z</updated>
     
@@ -451,11 +451,11 @@
     </summary>
     
     
-      <category term="Node.js" scheme="https://ytetsuro.github.io/blog/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://i.botch.me/tags/Node-js/"/>
     
-      <category term="Hexo" scheme="https://ytetsuro.github.io/blog/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://i.botch.me/tags/Hexo/"/>
     
-      <category term="Github Pages" scheme="https://ytetsuro.github.io/blog/tags/Github-Pages/"/>
+      <category term="Github Pages" scheme="https://i.botch.me/tags/Github-Pages/"/>
     
   </entry>
   
