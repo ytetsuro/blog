@@ -221,11 +221,11 @@
     </summary>
     
     
-      <category term="TypeScript" scheme="https://i.botch.me/tags/TypeScript/"/>
-    
       <category term="Factory" scheme="https://i.botch.me/tags/Factory/"/>
     
       <category term="DRY" scheme="https://i.botch.me/tags/DRY/"/>
+    
+      <category term="TypeScript" scheme="https://i.botch.me/tags/TypeScript/"/>
     
   </entry>
   
