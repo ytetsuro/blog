@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>dhashを生成するライブラリ作った • やったこと</title><meta name="description" content="dhashを生成するライブラリ作った - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="dhashを生成するライブラリ作った先日参加した勉強会でdhashというものを初めて知りました。  参加した勉強会 dhash 作ったリポジトリ  読んでみると、すごく簡単なアルゴリズムで画像の類似度を計算していたので「これ、JSで書けるんじゃない？」と気軽に思ったのが地獄の始まりでした。 dhashってなに？画像の類似度を計算するためのハッシュアルゴリズムです。特徴としては以下のようです。  誤">
+<meta name="keywords" content="TypeScirpt, image-hash, dhash">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dhashを生成するライブラリ作った">
+<meta property="og:url" content="https://i.botch.me/2019/08/26/dhashを生成するライブラリ作った/index.html">
+<meta property="og:site_name" content="やったこと">
+<meta property="og:description" content="dhashを生成するライブラリ作った先日参加した勉強会でdhashというものを初めて知りました。  参加した勉強会 dhash 作ったリポジトリ  読んでみると、すごく簡単なアルゴリズムで画像の類似度を計算していたので「これ、JSで書けるんじゃない？」と気軽に思ったのが地獄の始まりでした。 dhashってなに？画像の類似度を計算するためのハッシュアルゴリズムです。特徴としては以下のようです。  誤">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2019-08-26T14:26:39.109Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dhashを生成するライブラリ作った">
+<meta name="twitter:description" content="dhashを生成するライブラリ作った先日参加した勉強会でdhashというものを初めて知りました。  参加した勉強会 dhash 作ったリポジトリ  読んでみると、すごく簡単なアルゴリズムで画像の類似度を計算していたので「これ、JSで書けるんじゃない？」と気軽に思ったのが地獄の始まりでした。 dhashってなに？画像の類似度を計算するためのハッシュアルゴリズムです。特徴としては以下のようです。  誤">
+<meta name="twitter:creator" content="@iBotchME"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="//cdn.rawgit.com/tiaanduplessis/nanoreset/master/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="やったこと"></head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="やったこと"><img class="logo-image" src="/logo.svg" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="https://github.com/ytetsuro" target="_blank">GITHUB</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/atom.xml" target="_self">RSS</a></li></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">dhashを生成するライブラリ作った</h1><a class="twitter-share-button" href="https://i.botch.me/2019/08/26/dhashを生成するライブラリ作った/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/TypeScirpt-image-hash-dhash/">TypeScirpt, image-hash, dhash</a></li></ul><div class="post-info"><a></a>2019-08-26</div><div class="post-content"><h1 id="dhashを生成するライブラリ作った"><a href="#dhashを生成するライブラリ作った" class="headerlink" title="dhashを生成するライブラリ作った"></a>dhashを生成するライブラリ作った</h1><p>先日参加した勉強会でdhashというものを初めて知りました。</p>
+<ul>
+<li><a href="https://nfug.connpass.com/" target="_blank" rel="noopener">参加した勉強会</a></li>
+<li><a href="http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html" target="_blank" rel="noopener">dhash</a></li>
+<li><a href="https://github.com/ytetsuro/image-hash" target="_blank" rel="noopener">作ったリポジトリ</a></li>
+</ul>
+<p>読んでみると、すごく簡単なアルゴリズムで画像の類似度を計算していたので「これ、JSで書けるんじゃない？」と気軽に思ったのが地獄の始まりでした。</p>
+<h2 id="dhashってなに？"><a href="#dhashってなに？" class="headerlink" title="dhashってなに？"></a>dhashってなに？</h2><p>画像の類似度を計算するためのハッシュアルゴリズムです。<br>特徴としては以下のようです。</p>
+<ul>
+<li>誤検知がほとんどない</li>
+<li>高速(aHashやpHashと比べて)</li>
+</ul>
+<h3 id="なぜ作ろうと思ったのか"><a href="#なぜ作ろうと思ったのか" class="headerlink" title="なぜ作ろうと思ったのか"></a>なぜ作ろうと思ったのか</h3><ul>
+<li>InstagramとかGoogle Photoみたいなサービスで、すでに登録してある画像を機械学習などを利用せずに検出できるだけでもメリットとしては大きそう。</li>
+<li>また、類似度計算の性質上、バリデーションの用途で使われやすそうだがほとんどがバックエンド用で書かれているため、フロントエンド用に書けば通信のコスト減らせるくない？と思った。</li>
+</ul>
+<h2 id="dhashってどう作るの？"><a href="#dhashってどう作るの？" class="headerlink" title="dhashってどう作るの？"></a>dhashってどう作るの？</h2><p>dhashの生成手順は以下です。</p>
+<ol>
+<li>画像を9x8にリサイズします。</li>
+<li>グレースケールに変換します。</li>
+<li>右隣と比較して現在の値が小さければ1、それ以外は0として扱います。(右端は計算しない)</li>
+<li>bitとして扱います。</li>
+</ol>
+<p><a href="https://tech.unifa-e.com/entry/2017/11/27/111546" target="_blank" rel="noopener">日本語の詳しい内容</a>もあって、アルゴリズムの概要自体はとてもわかりやすかったです。<br>この生成手順は<a href="http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html" target="_blank" rel="noopener">情報元？</a>を参考にしたものだが、実際に実装してみたらそんなに簡単にはいきませんでした。</p>
+<h2 id="ハマったポイント"><a href="#ハマったポイント" class="headerlink" title="ハマったポイント"></a>ハマったポイント</h2><p>ハマったポイントは以下です。</p>
+<ol>
+<li>JSで64bitは簡単に扱えないよ</li>
+<li>リサイズアルゴリズムが不明だよ</li>
+<li>グレースケールアルゴリズムが不明だよ</li>
+</ol>
+<h3 id="JSで64bitを簡単には扱えないよ"><a href="#JSで64bitを簡単には扱えないよ" class="headerlink" title="JSで64bitを簡単には扱えないよ"></a>JSで64bitを簡単には扱えないよ</h3><p>JSでよくある2進数 -&gt; 16進数の変換方法が以下です。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>, <span class="number">2</span>).toString(<span class="number">16</span>);</span><br></pre></td></tr></table></figure>
+<p>おわかりかもしれませんが、一旦Number型にしているので大きな数値を扱う時は桁が溢れて違う数値になります。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 40000000000000</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'111111111111111111111111111111111111111111111111111111'</span>, <span class="number">2</span>).toString(<span class="number">16</span>);</span><br></pre></td></tr></table></figure>
+<p>これは、4文字づつの配列にして16進数に変換するようにしました。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = <span class="string">'111111111111111111111111111111111111111111111111111111'</span>;</span><br><span class="line"><span class="keyword">const</span> chunk = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">const</span> chunkedArray = [...Array(<span class="built_in">Math</span>.ceil(array.length / chunk)).keys()]</span><br><span class="line">    .map(<span class="function"><span class="params">index</span> =&gt;</span> array.slice(index * chunk, (index * chunk) + chunk));</span><br><span class="line"><span class="built_in">console</span>.log(chunkedArray.map(<span class="function"><span class="params">row</span> =&gt;</span> <span class="built_in">parseInt</span>(row.join(<span class="string">''</span>), <span class="number">2</span>).toString(<span class="number">16</span>)).join(<span class="string">''</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="リサイズアルゴリズムが不明だよ"><a href="#リサイズアルゴリズムが不明だよ" class="headerlink" title="リサイズアルゴリズムが不明だよ"></a>リサイズアルゴリズムが不明だよ</h3><p>世の中には、リサイズアルゴリズムが複数あります。<br>PythonのPillowでサポートされているアルゴリズムでも<a href="https://pillow.readthedocs.io/en/4.0.x/handbook/concepts.html#filters" target="_blank" rel="noopener">6種類</a>あります。<br>どれかわかりませんでしたが、結果としてはLanczosにしました。<br>ライブラリとして実装する上で、他のライブラリとハッシュ値が異なると非常に使いにくいものになってしまいます。</p>
+<p>私のアプローチは以下です。</p>
+<ol>
+<li>何も考えずブラウザにリサイズさせてみる。</li>
+<li>ライブラリ探す。</li>
+<li>JSから逃げる。</li>
+<li>リサイズアルゴリズムを自前で実装する。</li>
+<li>ライブラリ探す。(再度)</li>
+</ol>
+<h4 id="ブラウザにリサイズさせてみる。"><a href="#ブラウザにリサイズさせてみる。" class="headerlink" title="ブラウザにリサイズさせてみる。"></a>ブラウザにリサイズさせてみる。</h4><p>ブラウザで以下のように実装しました。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> image = <span class="keyword">new</span> Image();</span><br><span class="line"><span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</span><br><span class="line">image.width = <span class="number">9</span>;</span><br><span class="line">image.height = <span class="number">8</span>;</span><br><span class="line">image.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">const</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">	ctx.drawImage(image, <span class="number">0</span>, <span class="number">0</span>, image.width, image.height);</span><br><span class="line">	<span class="keyword">const</span> colorMap = ctx.getImageData(<span class="number">0</span>, <span class="number">0</span>, image.width, image.height);</span><br><span class="line">&#125;;</span><br><span class="line">image.src = <span class="string">'./test.png'</span>;</span><br></pre></td></tr></table></figure>
+<p>似たようなハッシュ値は確かに取れますが、ブラウザによって結果が変わります。<br>これは、drawImageの第7,8引数でリサイズしても、一緒です。<br>変わるとしたらCSSの <code>image-rendering</code> プロパティで多少の違いはあれど、意図した結果は得られませんでした。</p>
+<h4 id="ライブラリを探す。"><a href="#ライブラリを探す。" class="headerlink" title="ライブラリを探す。"></a>ライブラリを探す。</h4><p>まずは、ハッシュ値が他のライブラリと異なっては困るので、Pythonの<a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a>を読むところから始めました。<br>ここで<br><a href="https://github.com/JohannesBuchner/imagehash/blob/master/imagehash/__init__.py#L206" target="_blank" rel="noopener">imagehashのdhashの実装を見て</a>初めて <code>Lanczos</code> という補正アルゴリズムでリサイズされているか知りました。<br>どうやら Pillowでは <code>ANTIALIAS</code> -&gt; <code>Lanczos</code> のようです。<br>そのため<a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a>では <code>Lanczos</code> を利用していることが伺えます。</p>
+<p>JSでは<code>Lanczos</code>をサポートしているライブラリとして<code>fabric</code>というものが見つかったので試してみましたが、意図した結果は得られませんでした。<br>そもそも <code>Lanczos</code> とはどんなアルゴリズムなのか知る必要があると思い<a href="http://www.maroon.dti.ne.jp/twist/4C616E637A6F73B4D8BFF4A4CBA4E8A4EBB2E8C1FCA4CEB3C8C2E7BDCCBEAE.html" target="_blank" rel="noopener">このサイト</a>を読みました。</p>
+<blockquote>
+<p>調べていく中で、ソースが付属しているフリーソフトなどを見かける機会もあったが、座標（距離）の小数部を丁寧に処理していないために、Lanczos関数の値が正確に計算できていない物もあった。<br>たとえLanczos関数を使ったとしても、距離の計算が雑では高品質な画像は得られない。</p>
+</blockquote>
+<p>とあり、なるほど。<br>浮動小数点に弱いJSで頑張ろうとするあたりがダメなんじゃないか？<br>と思うようになりました。</p>
+<h4 id="JSから逃げる。"><a href="#JSから逃げる。" class="headerlink" title="JSから逃げる。"></a>JSから逃げる。</h4><p>次のアプローチとして、JSが苦手な土俵をわざわざJSで戦う必要はないなと思ったので、WebAssemblyを使おうと思いました。<br>今回は<a href="https://github.com/KnicKnic/WASM-ImageMagick" target="_blank" rel="noopener">ImageMagickのWebAssemblyのプロジェクト</a>を利用することにしました。</p>
+<p>意図通りの結果を得ることはできました。🎉<br>ブラウザ上でImageMagickが動くことに感動しました。OSSに感謝。<br>しかし、以下が問題です。</p>
+<ol>
+<li><a href="https://github.com/KnicKnic/WASM-ImageMagick#below-examples-need-additional-files-coppied" target="_blank" rel="noopener">wasmとjsファイルをコピーする必要がある。</a></li>
+<li>バグっている。(ちょっと書き換えれば治る。issue作成済み。)</li>
+</ol>
+<h4 id="リサイズアルゴリズムを自前で実装する。"><a href="#リサイズアルゴリズムを自前で実装する。" class="headerlink" title="リサイズアルゴリズムを自前で実装する。"></a>リサイズアルゴリズムを自前で実装する。</h4><p>TypeScriptにはbigintもあるし、浮動小数点を扱うためのライブラリも数多く出ているので、それらを使ってリサイズしてみることにしました。<br>ちなみに、<a href="https://basarat.gitbooks.io/typescript/docs/javascript/number.html#bigjs" target="_blank" rel="noopener">TypeScript DeepDiveにも書いてある</a>通りパフォーマンスに影響を及ぼす可能性が高いが、この際正しい結果が得られるのであれば無視します( 過程や…！ 方法なぞ…！ どうでもよいのだァーッ)。<br>このあたりで、正直自分の思考が正気ではないのを感じましたが、後には引けない(お盆を全て潰して娘が泣いている隣でコードを書く)状況でしたので諦めませんでした。</p>
+<p><a href="https://github.com/ytetsuro/image-hash/blob/master/src/HashableImageSourceConverter/Resizer/VanilaLanczosResizer.ts" target="_blank" rel="noopener">頑張って書いた</a>結果、意図通りの結果を得ることはできませんでした。</p>
+<p>また、256x256を9x8にリサイズするので12sもかかる有様でした。</p>
+<h4 id="ライブラリを探す。-1"><a href="#ライブラリを探す。-1" class="headerlink" title="ライブラリを探す。"></a>ライブラリを探す。</h4><p>一つ前のステップでリサイズアルゴリズムを実装して思ったのが、JSで <code>Lanczos</code> と謳われているものはほとんど同じようなコードでした。<br>その点を踏まえてGitHubで <code>Lanczos</code> で検索して片っ端から自分の実装と似ていないライブラリを探しているとStar数やFork数は少ないが<a href="https://github.com/rgba-image/lanczos" target="_blank" rel="noopener">自分とは異なる方法でLanczosのリサイズ</a>を実装しているライブラリを見つけました。</p>
+<p>このライブラリで、実装してみた結果意図通りの結果を得ることができました。<br>しかも、高速で256x256を9x8で60msぐらいでリサイズすることができました。</p>
+<p>正直、Lanczosでこの速度はcrazyだと思います。<br>なぜ、こんなに速いのか、なぜ正しい結果が得られるのかは後でちゃんとロジックを読んでみようと思います。<br>OSSに感謝。</p>
+<h3 id="グレースケールアルゴリズムが不明だよ"><a href="#グレースケールアルゴリズムが不明だよ" class="headerlink" title="グレースケールアルゴリズムが不明だよ"></a>グレースケールアルゴリズムが不明だよ</h3><p>グレースケールもリサイズと同じでいっぱいありました。</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas#Grayscaling_and_inverting_colors" target="_blank" rel="noopener">RGB平均</a></li>
+<li><a href="https://qiita.com/yoya/items/96c36b069e74398796f3#itu-r-rec-bt601" target="_blank" rel="noopener">ITU-R Rec BT.601</a></li>
+<li><a href="https://qiita.com/yoya/items/96c36b069e74398796f3#hsl-%E3%81%AE-l-rgb-%E3%81%AE%E6%9C%80%E5%A4%A7%E3%81%A8%E6%9C%80%E5%B0%8F%E3%81%AE%E4%B8%AD%E9%96%93" target="_blank" rel="noopener">中央値とるやつ</a></li>
+<li><a href="https://ofo.jp/osakana/cgtips/grayscale.phtml#id2" target="_blank" rel="noopener">NTSC Coef</a></li>
+</ul>
+<p>Pythonの<a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a>を参考にすると<a href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert" target="_blank" rel="noopener">ITU-R 601-2 luma</a>となっていました。</p>
+<p>ご丁寧に計算式までドキュメントに記載されていますのでこのまま流用しました。</p>
+<h3 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h3><p>dhashを作りたい時は以下の手順で作ります。</p>
+<ol>
+<li>画像を9x8にリサイズします。(Lanczos lobs 3)</li>
+<li>グレースケールに変換します。(ITU-R 601-2 luma)</li>
+<li>右隣と比較して現在の値が小さければ1、それ以外は0として扱います。(右端は計算しない)</li>
+<li>bitとして扱います。</li>
+</ol>
+<p>また、この情報は、とりあえず<a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a>を参考にしただけで別の正しいdhashの仕様とかあれば教えてください。<br>余談ですが、<a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a>で生成したハッシュは<a href="http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html" target="_blank" rel="noopener">情報元？</a>の画像をハッシュ化しても同じハッシュ値にはなりませんでした。😭</p>
+<p>あと、<a href="https://nfug.connpass.com/" target="_blank" rel="noopener">こんな感じの新しい知見に触れられる勉強会はNFUG</a>です。</p>
+<h4 id="良かったこと"><a href="#良かったこと" class="headerlink" title="良かったこと"></a>良かったこと</h4><ul>
+<li>画像縮小アルゴリズムやグレースケールのアルゴリズムとかが勉強になった。</li>
+<li>途中でJSをやめてWebAssemblyに逃げたのは良いアプローチだと思った。</li>
+<li>難しいアルゴリズムでも実装してみれば割と理解が深まると思った。</li>
+</ul>
+<h4 id="良くなかったこと"><a href="#良くなかったこと" class="headerlink" title="良くなかったこと"></a>良くなかったこと</h4><ul>
+<li>指針を決めずに作り始めたので、どのアルゴリズムにするかの判断が遅くなった。</li>
+<li>openにしたくないモジュールまでopenにしてしまっている。</li>
+<li>ロジックを理解していないままライブラリを使った。</li>
+<li>Canvasのテストがめんどくさすぎてテストが雑になってしまった。</li>
+</ul>
+<h4 id="次にやりたいこと"><a href="#次にやりたいこと" class="headerlink" title="次にやりたいこと"></a>次にやりたいこと</h4><ul>
+<li>ライブラリのロジックを理解する。</li>
+<li>WebGLでLanczosをサポートしてそうなのでやってみる。</li>
+<li>WebAssemblyをつかって何か書いてみる。</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://nfug.connpass.com/" target="_blank" rel="noopener">NFUG</a></li>
+<li><a href="http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html" target="_blank" rel="noopener">dhash</a></li>
+<li><a href="https://github.com/JohannesBuchner/imagehash" target="_blank" rel="noopener">imagehash</a></li>
+<li><a href="https://github.com/KnicKnic/WASM-ImageMagick" target="_blank" rel="noopener">WASM-ImageMagick</a></li>
+<li><a href="https://github.com/rgba-image/lanczos" target="_blank" rel="noopener">lanczos</a></li>
+<li><a href="https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert" target="_blank" rel="noopener">ITU-R 601-2</a></li>
+<li><a href="https://tech.unifa-e.com/entry/2017/11/27/111546" target="_blank" rel="noopener">日本語のdhashの説明</a></li>
+<li><a href="https://ofo.jp/osakana/cgtips/grayscale.phtml" target="_blank" rel="noopener">グレースケールについて</a></li>
+<li><a href="http://www.maroon.dti.ne.jp/twist/4C616E637A6F73B4D8BFF4A4CBA4E8A4EBB2E8C1FCA4CEB3C8C2E7BDCCBEAE.html" target="_blank" rel="noopener">Lanczosのリサイズについて</a></li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/2018/12/04/ci-phpunit-testを使う時に知っておいて欲しいCodeIgniter3の実装-Modelの実装/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+var disqus_identifier = '2019/08/26/dhashを生成するライブラリ作った/';
+var disqus_title = 'dhashを生成するライブラリ作った';
+var disqus_url = 'https://i.botch.me/2019/08/26/dhashを生成するライブラリ作った/';
+(function () {
+    var dsq = document.createElement('script'); dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//ytetsuro.disqus.com/count.js" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if (container.querySelector('#disqus_thread') && window.DISQUS) {
+            var title = document.getElementsByTagName('title')[0].textContent;
+            var path  = location.pathname.substr('/'.length);
+            console.log(DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = path;
+                    this.page.url = 'https://i.botch.me/'+path;
+                    this.page.title = title;
+                }
+            }));
+        }
+    })
+})</script><a class="twitter-share-button" href="https://i.botch.me/2019/08/26/dhashを生成するライブラリ作った/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><div class="copyright"><p>&copy; 2018 - 2019 <a href="https://ytetsuro.github.io/blog">ytetsuro</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-119327110-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-119327110-1');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>
