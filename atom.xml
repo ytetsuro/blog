@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://i.botch.me/"/>
-  <updated>2020-05-24T22:42:19.649Z</updated>
+  <updated>2020-05-25T14:57:21.206Z</updated>
   <id>https://i.botch.me/</id>
   
   <author>
@@ -21,12 +21,24 @@
     <link href="https://i.botch.me/2020/05/25/CleanCode%E8%AA%AD%E6%9B%B8%E8%A8%98%E9%8C%B2%E3%80%9C%E9%96%A2%E6%95%B0%E3%80%9C/"/>
     <id>https://i.botch.me/2020/05/25/CleanCode読書記録〜関数〜/</id>
     <published>2020-05-24T22:42:19.000Z</published>
-    <updated>2020-05-24T22:42:19.649Z</updated>
+    <updated>2020-05-25T14:57:21.206Z</updated>
+    
+    <content type="html"><![CDATA[<p>Robert C. Martin先生のCleanCode第3章を読んだメモ。</p><h2 id="関数-第3章-の概要"><a href="#関数-第3章-の概要" class="headerlink" title="関数(第3章)の概要"></a>関数(第3章)の概要</h2><ul><li>小さいこと<ul><li>関数内の処理は20行に達することがほとんどないように書きなさい。</li><li>ブロックとインデントも同じ<ul><li>インデントレベルは1つか2つまで</li></ul></li></ul></li><li>1つのことを行う<ul><li>TO節で表現して1つの抽象レベルが1つの単位</li><li>もう一つの方法は、その関数の実装の中から単なる言い換えではなく、別の関数を抽出できるか調べる。</li><li>抽象レベルを揃える。(抽象度が異なるものを混ぜない。)<ul><li>複数の抽象レベルのことを一緒に扱うと常に混乱を招く。</li></ul></li></ul></li><li>逓減規則<ul><li>コードは上から下へ物語のように読める必要がある。</li><li>TO節の並びとしてプログラムが読める必要がある。</li></ul></li><li>switch文(if elseを含む)<ul><li>小さくするのが難しいのであんまり使わないこと。</li><li>全く使わないのも難しいので、最下層の抽象Factoryに留めて、多態オブジェクトを生成し、継承の裏に隠されていれば許す。</li></ul></li><li>内容をよく表す名前を使う。<ul><li>小さな関数に内容をよく表す名前をつける。</li><li>長い名前は不可解なコメントよりも優れている。</li><li>名付けには十分時間をかける。</li><li>整合性を持ってつける。</li></ul></li><li>関数の引数<ul><li>3つはできれば避ける。</li><li>4つはよほどの理由がなければやめる。</li><li>引数に現れた時点で実装詳細について知る必要が出てくる。</li><li>テストの観点でも、組み合わせを網羅するテストケースが必要になるため大量の引数は大変。</li></ul></li><li>共通モナディック形式<ul><li>出力引数(本書の文脈の中では、引数のオブジェクトに対して何か代入することっぽい)は避ける。<ul><li>混乱を招くから。</li></ul></li></ul></li><li>フラグ引数<ul><li>booleanを引数に渡す関数は、2つ以上のことをしているからやめるべき。</li></ul></li><li>引数2つの関数<ul><li>1つの関数よりも理解しづらい。</li><li>順番を覚えるのも大変<ul><li><code>assertEquals(expected, actual)</code>も、テスティングFWによって順番がまちまちで学習する必要がある。</li></ul></li><li><code>new Point(0, 0)</code> などもあるので必ずしも悪というわけではない。</li><li>1つの引数に変換するための方法を知っておく必要はある。<ul><li>メンバ変数にする</li><li>クラスを分ける。</li></ul></li></ul></li><li>引数3つの関数<ul><li>2つよりも理解が難しい。<ul><li>順序</li><li>立ち止まりの問題</li><li>頭の中から追い出す問題</li></ul></li></ul></li><li>引数オブジェクト<ul><li>引数が増えるなら、引数をオブジェクトにすれば良いじゃない。</li></ul></li><li>引数リスト<ul><li>可変引数のこと。</li><li>引数が一つのList型であるものとして扱う。</li><li>3つ以上の引数の中で利用してたら誤り。(例: <code>bad(name, count, age, ...item)</code>)</li></ul></li><li>動詞とキーワード<ul><li>キーワードとして引数を表すとわかりやすくなる <code>getElement(id: string) -&gt; getElementById(id: string)</code></li><li>順番の問題もある程度軽減される <code>assertExpectedEqualsActual(expected: any, actual: any)</code></li></ul></li><li>副作用を避ける<ul><li>1つのことを行うルールを破ることになる。</li><li>出力引数は避ける。</li><li>自分自身の状態を変更すべき</li></ul></li><li>CQRS<ul><li>書き込み(プロパティの変更を含む)と読み込みを分ける。</li><li>混乱を招くから</li></ul></li><li>戻りコードよりも例外を好む<ul><li>エラーコードを返すのは微妙にCQRSに反している。<ul><li>呼び出し元がすぐにエラーを処理しなければいけないから。</li></ul></li></ul></li><li>try/catchブロックの分離<ul><li>tryブロックとcatchブロックの中身を関数として外に出してしまった方が良い。<ul><li>try/catch自体が、正常処理と以上処理が混ざって不格好だから</li></ul></li></ul></li><li>エラー処理も一つの処理<ul><li>エラー処理以外のことをさせない。</li><li>tryが関数内にあるなら、関数の一番最初の単語でなければならない。</li><li>catchやfinallyは最後でなければならない。</li></ul></li><li>Error.java依存性磁石<ul><li>エラーコードを返すEnumとかやめて。<ul><li>依存関係が壊れやすくなる。</li><li>コンパイルが必要な言語ならエラーを追加するたびにビルドが必要になるから。</li></ul></li><li>Exceptionの派生クラスをthrowして。</li></ul></li><li>DRY<ul><li>OOP,AOP,COP,構造化プログラミングなど様々なものが重複を取り除く試みをしている。</li><li>エドガー・ダイクストラの関数の出口と入口は1つにすべきというルールは関数が小さければあまり役に立たない。</li><li>gotoダメ絶対!</li></ul></li><li>なぜ関数をこのように書くのか<ul><li>コードを書くのは、執筆と同じようなもの。</li><li>最初はうまく構成されていない。</li><li>様々な遂行を行いテストコードを書いて洗練させる。</li><li>最後に出来上がったものはこの章の規則に従ったものになる。</li><li>最初から完璧なものができるわけではない。(そんなことは誰にもできない)</li></ul></li><li>結論<ul><li>話して聞かせるストーリーのように書け。</li></ul></li></ul><h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>以前と同じく、わかりみが深い。<br>また、知見としてエラー処理も一つの処理としてtryが最初でcatchが最後とかは、結構悩んでいたポイントなので目からウロコだった。<br>あと、直近でError.java依存性磁石は抱えていた問題だったので、なるほど例外クラスの派生クラスで良いのかというポイントも目からウロコだった。</p><p>DRYに関しては、かなり難しい。<br>同著者のCleanArchitectureでも記載されているように <code>偶然の一致</code> か <code>一致</code> を見分けるのがかなりセンスが必要になるなと感じた。</p><p>あと、コンストラクタの引数が結構増えがちだが、これもオブジェクトにして少なくすべきなのだろうか。。。<br>少なくすることは、技術的には可能だが、結局ネストが増えてデメテルの法則を破りそうでかなり難しいと感じた。</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;Robert C. Martin先生のCleanCode第3章を読んだメモ。&lt;/p&gt;
+&lt;h2 id=&quot;関数-第3章-の概要&quot;&gt;&lt;a href=&quot;#関数-第3章-の概要&quot; class=&quot;headerlink&quot; title=&quot;関数(第3章)の概要&quot;&gt;&lt;/a&gt;関数(第3章)の概要
+      
+    
     </summary>
     
+    
+      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
+    
+      <category term="読書メモ" scheme="https://i.botch.me/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/"/>
     
   </entry>
   
