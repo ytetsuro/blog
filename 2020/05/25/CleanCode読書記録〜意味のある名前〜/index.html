@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>CleanCode読書記録〜意味のある名前〜 • やったこと</title><meta name="description" content="CleanCode読書記録〜意味のある名前〜 - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Robert C. Martin先生のCleanCode第2章を読んだメモ。 意味のある名前(第2章)の概要 意図が明確の名前にする。 名前の解説が必要なら、その名前は明確ではない。 名前が意図を明確にしていなければ、コードが変更しづらくなる。   偽情報を避ける Unixプラットフォームに使われている名称や、エンジニアが誤解しやすい名前を避ける hp,aix,scoなど ListじゃないのにLi">
+<meta name="keywords" content="CleanCode,読書メモ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CleanCode読書記録〜意味のある名前〜">
+<meta property="og:url" content="https://i.botch.me/2020/05/25/CleanCode読書記録〜意味のある名前〜/index.html">
+<meta property="og:site_name" content="やったこと">
+<meta property="og:description" content="Robert C. Martin先生のCleanCode第2章を読んだメモ。 意味のある名前(第2章)の概要 意図が明確の名前にする。 名前の解説が必要なら、その名前は明確ではない。 名前が意図を明確にしていなければ、コードが変更しづらくなる。   偽情報を避ける Unixプラットフォームに使われている名称や、エンジニアが誤解しやすい名前を避ける hp,aix,scoなど ListじゃないのにLi">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2020-05-25T04:44:27.913Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CleanCode読書記録〜意味のある名前〜">
+<meta name="twitter:description" content="Robert C. Martin先生のCleanCode第2章を読んだメモ。 意味のある名前(第2章)の概要 意図が明確の名前にする。 名前の解説が必要なら、その名前は明確ではない。 名前が意図を明確にしていなければ、コードが変更しづらくなる。   偽情報を避ける Unixプラットフォームに使われている名称や、エンジニアが誤解しやすい名前を避ける hp,aix,scoなど ListじゃないのにLi">
+<meta name="twitter:creator" content="@iBotchME"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="//cdn.rawgit.com/tiaanduplessis/nanoreset/master/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="やったこと"></head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="やったこと"><img class="logo-image" src="/logo.svg" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="https://github.com/ytetsuro" target="_blank">GITHUB</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/atom.xml" target="_self">RSS</a></li></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CleanCode読書記録〜意味のある名前〜</h1><a class="twitter-share-button" href="https://i.botch.me/2020/05/25/CleanCode読書記録〜意味のある名前〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/CleanCode/">CleanCode</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/読書メモ/">読書メモ</a></li></ul><div class="post-info"><a></a>2020-05-25</div><div class="post-content"><p>Robert C. Martin先生のCleanCode第2章を読んだメモ。</p>
+<h2 id="意味のある名前-第2章-の概要"><a href="#意味のある名前-第2章-の概要" class="headerlink" title="意味のある名前(第2章)の概要"></a>意味のある名前(第2章)の概要</h2><ul>
+<li>意図が明確の名前にする。<ul>
+<li>名前の解説が必要なら、その名前は明確ではない。</li>
+<li>名前が意図を明確にしていなければ、コードが変更しづらくなる。</li>
+</ul>
+</li>
+<li>偽情報を避ける<ul>
+<li>Unixプラットフォームに使われている名称や、エンジニアが誤解しやすい名前を避ける<ul>
+<li>hp,aix,scoなど</li>
+<li>ListじゃないのにListなど</li>
+</ul>
+</li>
+<li>似た概念に似たつづり<ul>
+<li>HyperTextMarkupLanguageForEffectVanilaとHyperTextMarkupLanguageForEffectJqueryなど。</li>
+<li>違いに気づくのに時間がかかる。</li>
+<li>自動コード補完の時にも使いにくくなる。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>意味のある対比を行う<ul>
+<li>ノイズワードを利用しない<ul>
+<li>a1などの意味のわからない名前を利用しない。</li>
+<li>InfoやDataなどの意味のある単語を利用しない。</li>
+<li>variable変数など</li>
+</ul>
+</li>
+<li>読み手に違いが明確に伝わる名前を利用する。<ul>
+<li>getAccount(), getAccounts(), getAccountInfo() などの名称だとどれを使えば良いかわかりづらい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>発音可能な名前をつける<ul>
+<li>造語を利用しない<ul>
+<li>覚えづらいから</li>
+</ul>
+</li>
+<li>その名前のコードについて話しているときマヌケっぽい。</li>
+</ul>
+</li>
+<li>検索可能な名前をつける<ul>
+<li>1文字の名前は間違いなく検索できない</li>
+<li>マジックナンバーも検索できない。</li>
+</ul>
+</li>
+<li>エンコーディングを避ける<ul>
+<li>ミスタイプの原因になる。</li>
+<li>発音可能なことはまずない</li>
+<li>精神的苦痛以外の何物でもない</li>
+</ul>
+</li>
+<li>ハンガリアン記法<ul>
+<li>現代の記法じゃない。<ul>
+<li>コンパイラが型をチェックしてくれない時代の産物</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>メンバープレフィックス<ul>
+<li><code>m_</code>でメンバ変数を表すなど<ul>
+<li>IDEで色分けしたら解決する問題なので、古い。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>インターフェースと実装<ul>
+<li>インターフェースにIRepositoryのようなプレフィックスをつけない。<ul>
+<li>散漫・情報過多</li>
+</ul>
+</li>
+<li>どうしてもつける場合は具象クラスにRepositoryImplなどの方が良い。</li>
+</ul>
+</li>
+<li>メタルマッピングを避ける<ul>
+<li>1文字の変数名をやめろ<ul>
+<li>forのiとかjは慣習なのとスコープが狭いから見逃しているだけ(l(小文字のエル)だけは許さない)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>クラス名<ul>
+<li>名詞で書く。動詞では書かない。</li>
+<li>Manager, Info, Data, Processerとかは避ける。</li>
+</ul>
+</li>
+<li>メソッド名<ul>
+<li>動詞で書く。</li>
+<li>Javaビーンズによれば、先頭に <code>get</code>, <code>set</code>, <code>is</code> のいずれかを置くと良い。</li>
+<li>コンストラクタのオーバーロードは、staticでFactoryを書いて、名前に引数を定義する。(DataModel.formFirebaseSnapshotなど)<ul>
+<li>もちろんConstructorで定義できるのが一番良い。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>気取らない<ul>
+<li>ウィットに富んだ名前をつけない(abort -&gt; eatMyShorts{私のパンツを食べろ}のような)</li>
+<li>面白さより明確さの方が価値があるから</li>
+</ul>
+</li>
+<li>1つのコンセプトには1つの概念<ul>
+<li>get, fetchなどが同じ意味で使われないようにする。(以下のように使い分ける)<ul>
+<li>get -&gt; 通信をせず、オブジェクトをストレージなどの内部リソースから取得</li>
+<li>fetch -&gt; 通信して取ってくるリソースを取ってくる</li>
+</ul>
+</li>
+<li>語彙集があると重宝する。</li>
+</ul>
+</li>
+<li>語呂合わせをしない<ul>
+<li><code>add</code>が2つのものを連結する目的で多くの箇所へ実装されていた場合に、コレクションに要素を追加するメソッドに対して <code>add</code> と名付けない。<code>append</code>や<code>insert</code>などの命名にする。</li>
+</ul>
+</li>
+<li>解決領域の用語の使用<ul>
+<li>何でもかんでも、解決領域から命名すれば良いってもんじゃない。<ul>
+<li>JobQueueなどのプログラマがわかる命名をつけるのは決して誤りではない。</li>
+<li>無理やり業務用語から持ってくる必要はない。</li>
+<li>いちいち業務用語の意味をお客さんやプロダクトオーナーに聞き取らなくてはならないから。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>問題領域の用語を使用<ul>
+<li>処理内容がプログラマチックでない場合は、問題領域から名前を取ってくると良い。</li>
+<li>解決領域と問題領域を切り分けるのは優れたプログラマや、設計者の仕事の一つ</li>
+</ul>
+</li>
+<li>意味のある文脈を加える<ul>
+<li>メソッドを細かく分割し、その中に変数を定義するなどでどの文脈なのかを明確にした方が良い。</li>
+</ul>
+</li>
+<li>根拠のない文脈を避ける<ul>
+<li>メールマガジンシステムでネームスペースMailingList内にメールアドレスを表すクラスを作る時に、AccountAddressなどは避けた方が良い。<ul>
+<li>MailingListネームスペースの中にあるからAddressでメールアドレスの意味は伝わるはず。</li>
+<li>アカウントのアドレス以外何が存在するのか。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最後に<ul>
+<li>Robert C. Martinは名前の変更は感謝しつつ受け入れている。</li>
+<li>名前の変更は、結果はすぐに現れて長い期間効果を発揮する。</li>
+</ul>
+</li>
+</ul>
+<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>わかりみが深い。<br>ただ、クラス名の必ず動詞つける部分は概ね同意だが、以下のようにCleanArchitectureでUseCaseを動詞にするのはままありそうなので、 <code>根拠のない文脈を避ける</code> と、 <code>Class名</code> はコンフリクトすることはありそう。</p>
+<p>参考: <a href="https://github.com/android10/Android-CleanArchitecture/issues/258" target="_blank" rel="noopener">https://github.com/android10/Android-CleanArchitecture/issues/258</a></p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/05/25/CleanCode読書記録〜関数〜/">prev</a><a class="next" href="/2020/05/17/CleanCodeの読書記録-CleanCode/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+var disqus_identifier = '2020/05/25/CleanCode読書記録〜意味のある名前〜/';
+var disqus_title = 'CleanCode読書記録〜意味のある名前〜';
+var disqus_url = 'https://i.botch.me/2020/05/25/CleanCode読書記録〜意味のある名前〜/';
+(function () {
+    var dsq = document.createElement('script'); dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//ytetsuro.disqus.com/count.js" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if (container.querySelector('#disqus_thread') && window.DISQUS) {
+            var title = document.getElementsByTagName('title')[0].textContent;
+            var path  = location.pathname.substr('/'.length);
+            console.log(DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = path;
+                    this.page.url = 'https://i.botch.me/'+path;
+                    this.page.title = title;
+                }
+            }));
+        }
+    })
+})</script><a class="twitter-share-button" href="https://i.botch.me/2020/05/25/CleanCode読書記録〜意味のある名前〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><div class="copyright"><p>&copy; 2018 - 2020 <a href="https://ytetsuro.github.io/blog">ytetsuro</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-119327110-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-119327110-1');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>
