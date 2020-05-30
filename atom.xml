@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://i.botch.me/"/>
-  <updated>2020-05-25T14:57:21.206Z</updated>
+  <updated>2020-05-30T10:32:56.733Z</updated>
   <id>https://i.botch.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CleanCode〜コメント〜</title>
+    <link href="https://i.botch.me/2020/05/30/CleanCode%E3%80%9C%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%80%9C/"/>
+    <id>https://i.botch.me/2020/05/30/CleanCode〜コメント〜/</id>
+    <published>2020-05-30T04:52:28.000Z</published>
+    <updated>2020-05-30T10:32:56.733Z</updated>
+    
+    <content type="html"><![CDATA[<p>Robert C. Martin先生のCleanCode第4章を読んだメモ。</p><h2 id="コメント-第4章-の概要"><a href="#コメント-第4章-の概要" class="headerlink" title="コメント(第4章)の概要"></a>コメント(第4章)の概要</h2><ul><li>コメント<ul><li>コメント自体は良いものではない。(必要悪)</li><li>コードでうまく表現するときに失敗したときに書く。</li></ul></li><li>コメントでダメなコードを取り繕うことはできない。<ul><li>コメントを書く前にコードで表現できないかを考える。</li></ul></li><li>自分自身をコードで説明する。<ul><li><code>(account.accessCount === 0) &amp;&amp; echo &#39;Hello&#39;;</code> よりも <code>(account.firstAccess()) &amp;&amp; echo &#39;Hello&#39;;</code> のようにコードで表現するようにしなさい。</li></ul></li><li>良いコメント<ul><li>まっとうなコメント<ul><li>著作権表示</li><li>ライセンスのリンク(ライセンス文章自体は入れない方が良い)</li><li>ドキュメントへの参照</li></ul></li><li>情報を与えるコメント<ul><li>複雑な正規表現に対してマッチする参考例など</li><li>抽象メソッドの返り値に関する説明(メソッド名で説明できない場合)</li></ul></li><li>意図の説明<ul><li><code>firebaseでは500件ごとにしかcreateできないので500件ごとに配列を分割する</code> など。</li></ul></li><li>明確化<ul><li>標準モジュールを利用していて自分でそのコードを改変できない状況の場合などに意図を明確化するために書く。</li><li><code>expect(a === b).toBe(true); // a === b</code> など</li></ul></li><li>結果に対する警告<ul><li><code>このfixtureは大規模なデータが入っている時の検証用のため、開発マシンの容量に余裕があるときに利用してください。</code> など</li></ul></li><li>todoコメント<ul><li>IDEがだいたい教えてくれる。</li><li>ただし、そのままにせず、検索して積極的に潰すこと。</li></ul></li><li>強調<ul><li>一見筋の通らないことを強調する目的で使う。</li><li><code>searchWord.trim()</code> に対して、<code>前後のスペースを除去しておかないと別のリストとして認識される</code>など</li></ul></li><li>公開APIにおけるJavadoc<ul><li>Javadocをきちんとメンテナンスする必要がある。</li><li>後述のよくないコメントの点に十分に留意して。</li></ul></li></ul></li><li>よくないコメント<ul><li>ぶつぶつ言う<ul><li>他のモジュールを調べなければ意味がわからないコメントは、情報伝達に失敗していて記憶領域の無駄</li></ul></li><li>冗長なコメント<ul><li>コードの処理内容を表している。<ul><li>コードを読んだ方が早い</li></ul></li><li>Javadocのプロパティの説明(プロパティ名を日本語で表しているだけ)</li></ul></li><li>誤解を招くコメント<ul><li>正確な内容を表していないコメントのこと。</li></ul></li><li>命令コメント<ul><li>全ての関数にJavadocを書けのようなルールは悪</li><li>このゴミには何の付加価値もなく、単にコードをわかりにくくし、潜在的な嘘と間違いを生産している(原文ママ)</li></ul></li><li>日誌コメント<ul><li><code>N年N月N日 〇〇をした</code> などのコメント</li><li>バージョン管理システムがないころの過去の遺物</li></ul></li><li>ノイズコメント<ul><li><code>コンストラクタ</code> などのすでに明らかなこと。</li><li><code>ちょっと休ませてほしい</code> など筆者の感情のみで何の意味も持たないコメント<ul><li>コメント書くぐらいなら休ませてほしいと思わないコードを書くことに労力を費やすべき</li></ul></li></ul></li><li>道導<ul><li><code>// Actions ////////////</code> のようなコメント</li><li>こういったコードの下にコードを集約させることにほとんど意味がない。</li><li>なるべく使い過ぎず、注目を集めるという効果が最大限のときに使うべき</li></ul></li><li>閉じ括弧コメント<ul><li>ブロックの最後に、ブロックがどのブロックで終わるのかを表すコメント <code>// endif</code> など</li><li>ゴミ</li><li>必要になるほどネストが深いことが問題。</li></ul></li><li>属性と署名<ul><li><code>Added by ytetsuro</code>などのコメント</li><li>バージョン管理システムでやれ</li></ul></li><li>コメントアウトされたコード<ul><li>コード自体をコメントアウトする行為</li><li>バージョン管理システムでやれ</li></ul></li><li>HTMLコメント<ul><li>読みづらい</li><li>ツールの問題</li></ul></li><li>非局所的なコメント<ul><li>この関数はAで呼び出されるはずなので <code>デフォルトの値は3</code> のような使われ方前提で書かれているコメント<ul><li>デフォルトならデフォルト値をメソッドに定義しろ</li></ul></li><li>いつクライアントコードが変更されるかなんてわからない</li></ul></li><li>多すぎる情報<ul><li>RFCのリンクと、該当箇所の引用などが記載されているコメント</li></ul></li><li>不明瞭なコメント<ul><li>コメントを読むのに説明が必要なコメント</li></ul></li><li>関数ヘッダ<ul><li>説明が不要なほど関数を短くしろ</li></ul></li><li>非公開のJavadoc<ul><li>公開しないならJavadocを書く必要がない。</li></ul></li></ul></li></ul><h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>とにかく、コメントが嫌いなようでこの章では <code>ゴミ</code> という直接的な表現が多く出てきた。<br>概ね納得だが、PHPやJSのような動的型付け言語ではIDEレベルでdocコメントを見ているのでその点は勘弁してほしいなと思った。(TypeScript や PHP 7.0 &lt; を使えばある程度解決するが。)<br>冗長なコメントについて、個人的にはプロパティ名に知らない英単語があった場合などは、どのような意味かが調べずともわかると言う点では一概に悪とは言えなさそうだと思った。(メンテナンスされるか？という点に関しては確かに本著の通りだとは思った。)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Robert C. Martin先生のCleanCode第4章を読んだメモ。&lt;/p&gt;
+&lt;h2 id=&quot;コメント-第4章-の概要&quot;&gt;&lt;a href=&quot;#コメント-第4章-の概要&quot; class=&quot;headerlink&quot; title=&quot;コメント(第4章)の概要&quot;&gt;&lt;/a&gt;コメント
+      
+    
+    </summary>
+    
+    
+      <category term="読書メモ" scheme="https://i.botch.me/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/"/>
+    
+      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
+    
+  </entry>
   
   <entry>
     <title>CleanCode読書記録〜関数〜</title>
@@ -36,9 +62,9 @@
     </summary>
     
     
-      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
-    
       <category term="読書メモ" scheme="https://i.botch.me/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/"/>
+    
+      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
     
   </entry>
   
@@ -62,9 +88,9 @@
     </summary>
     
     
-      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
-    
       <category term="読書メモ" scheme="https://i.botch.me/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/"/>
+    
+      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
     
   </entry>
   
@@ -88,9 +114,9 @@
     </summary>
     
     
-      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
-    
       <category term="読書メモ" scheme="https://i.botch.me/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/"/>
+    
+      <category term="CleanCode" scheme="https://i.botch.me/tags/CleanCode/"/>
     
   </entry>
   
@@ -534,33 +560,6 @@
       <category term="Design Pattern" scheme="https://i.botch.me/tags/Design-Pattern/"/>
     
       <category term="GoF" scheme="https://i.botch.me/tags/GoF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexoを使ってGithubPagesにBlogを構築してみた</title>
-    <link href="https://i.botch.me/2018/05/16/Hexo%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6Blog%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/"/>
-    <id>https://i.botch.me/2018/05/16/Hexoを使ってBlogを構築してみた/</id>
-    <published>2018-05-16T06:57:45.000Z</published>
-    <updated>2018-05-16T10:39:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="使用したツールなど"><a href="#使用したツールなど" class="headerlink" title="使用したツールなど"></a>使用したツールなど</h2><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a></p><p>Node.js製のMarkdownから静的なHTMLやCSSを出力してくれるブログツール</p><p><a href="https://pages.github.com/" target="_blank" rel="noopener">GithubPages</a></p><p>リポジトリの特定のブランチを静的なページとして表示してくれるGithubの機能</p><h2 id="導入方法"><a href="#導入方法" class="headerlink" title="導入方法"></a>導入方法</h2><h3 id="GitHubPages作成手順"><a href="#GitHubPages作成手順" class="headerlink" title="GitHubPages作成手順"></a>GitHubPages作成手順</h3><ol><li>GitHubにてリポジトリを作成</li><li>作成したGitHubリポジトリより「Setting」 -&gt; [Github Pages] -&gt; [Source] -&gt; [master Branch]を選択してSaveを押下</li></ol><p>これで、GitHub Pagesは作成完了👍</p><h3 id="Hexoの導入"><a href="#Hexoの導入" class="headerlink" title="Hexoの導入"></a>Hexoの導入</h3><p>Hexoのドキュメントに従って以下を実行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure><p>Blogの設定を変更</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"> ## Source: https://github.com/hexojs/hexo/</span><br><span class="line"> </span><br><span class="line"> # Site</span><br><span class="line"><span class="deletion">-title: Hexo</span></span><br><span class="line"><span class="deletion">-subtitle:</span></span><br><span class="line"><span class="deletion">-description:</span></span><br><span class="line"><span class="deletion">-keywords:</span></span><br><span class="line"><span class="deletion">-author: John Doe</span></span><br><span class="line"><span class="deletion">-language:</span></span><br><span class="line"><span class="deletion">-timezone:</span></span><br><span class="line"><span class="addition">+title: &#123;&#123;ブログのタイトル&#125;&#125;</span></span><br><span class="line"><span class="addition">+subtitle: &#123;&#123;ブログのサブタイトル&#125;&#125;</span></span><br><span class="line"><span class="addition">+description: &#123;&#123;ブログの詳細な説明を書く&#125;&#125;</span></span><br><span class="line"><span class="addition">+keywords: &#123;&#123;多分keywordを書く@todo: themeによって異なりそうだけど、metaのkeywork？&#125;&#125;</span></span><br><span class="line"><span class="addition">+author: &#123;&#123;自分の名前&#125;&#125;</span></span><br><span class="line"><span class="addition">+language: ja</span></span><br><span class="line"><span class="addition">+timezone: Asia/Tokyo</span></span><br><span class="line"> </span><br><span class="line"> # URL</span><br><span class="line"> ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span><br><span class="line"><span class="deletion">-url: http://yoursite.com</span></span><br><span class="line"><span class="deletion">-root: /</span></span><br><span class="line"><span class="addition">+url: https://&#123;&#123;Githubのユーザ名&#125;&#125;.github.io/&#123;&#123;Github Pagesとして作ったリポジトリ名&#125;&#125;</span></span><br><span class="line"><span class="addition">+root: /&#123;&#123;Github Pagesとして作ったリポジトリ名&#125;&#125;</span></span><br><span class="line"> permalink: :year/:month/:day/:title/</span><br><span class="line"> permalink_defaults:</span><br><span class="line"> </span><br><span class="line"><span class="meta">@@ -73,9 +73,11 @@</span></span><br><span class="line"> # Extensions</span><br><span class="line"> ## Plugins: https://hexo.io/plugins/</span><br><span class="line"> ## Themes: https://hexo.io/themes/</span><br><span class="line"> theme: landscape</span><br><span class="line"> </span><br><span class="line"> # Deployment</span><br><span class="line"> ## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line"> deploy:</span><br><span class="line"><span class="deletion">-  type:</span></span><br><span class="line"><span class="addition">+  type: git</span></span><br><span class="line"><span class="addition">+  repo: &#123;&#123;Github Pagesで作ったリポジトリ&#125;&#125;</span></span><br><span class="line"><span class="addition">+  branch: master</span></span><br></pre></td></tr></table></figure><h4 id="Hexoにthemeを指定する"><a href="#Hexoにthemeを指定する" class="headerlink" title="Hexoにthemeを指定する"></a>Hexoにthemeを指定する</h4><p>デフォルトのテーマだとHello Worldのページ表示に1.44secかかっていたので、<br>もっと軽量で500ms以内でHello Worldぐらいの内容を返してくれるthemeを探ことにした。<br>(hexo serverにて計測)</p><p>Hexoには<a href="https://hexo.io/themes" target="_blank" rel="noopener">Theme 一覧</a>ページがあったので、ここからいい感じのthemeを探す。</p><p><a href="https://github.com/tiaanduplessis/hexo-theme-brewski" target="_blank" rel="noopener">brewski</a>がすごく軽量だったので手元のHexoにインストールする。<br>(名前からしてbrew Licenceかと思ったが、MITだった。)</p><p>このthemeはドキュメントが充実していたのでドキュメント通りに下記を実行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/tiaanduplessis/hexo-theme-brewski.git themes/brewski</span><br><span class="line">$ npm install --save hexo-renderer-pug hexo-generator-feed hexo-generator-sitemap</span><br><span class="line">$ vim theme/_config.yml</span><br></pre></td></tr></table></figure><p><em>menuは空の値を作ると<a href="https://github.com/tiaanduplessis/hexo-theme-brewski/issues/1" target="_blank" rel="noopener">こんなエラーがでてbuildできない</a>ので必ず埋めること。</em></p><p>不要であれば項目自体消す。</p><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@@ -5,7 +5,7 @@</span></span><br><span class="line">   Home: /</span><br><span class="line">   About: /about</span><br><span class="line">   Archives: /archives</span><br><span class="line"><span class="deletion">-  GitHub: </span></span><br><span class="line"><span class="addition">+  GitHub: &#123;&#123;GitHubのURLなどHeaderに付くリンク&#125;&#125;</span></span><br><span class="line">   RSS: /atom.xml</span><br><span class="line"> </span><br><span class="line"> favicon: /favicon.svg</span><br><span class="line"><span class="meta">@@ -15,10 +15,10 @@</span></span><br><span class="line"><span class="deletion">-disqus: </span></span><br><span class="line"><span class="addition">+disqus: &#123;&#123;Disqusのshortname(必要であれば)&#125;&#125;</span></span><br><span class="line"> </span><br><span class="line"> # Analytics</span><br><span class="line"><span class="deletion">-google_analytics:</span></span><br><span class="line"><span class="addition">+google_analytics: UA-XXXXXXXXX-1</span></span><br><span class="line"> </span><br><span class="line"> # Copyright Infomation</span><br><span class="line"> copyright:</span><br><span class="line"><span class="deletion">-  since:</span></span><br><span class="line"><span class="deletion">-  name: </span></span><br><span class="line"><span class="deletion">-  url:  </span></span><br><span class="line"><span class="addition">+  since: 2018</span></span><br><span class="line"><span class="addition">+  name: &#123;&#123;名前&#125;&#125;</span></span><br><span class="line"><span class="addition">+  url: &#123;&#123;ブログのURL&#125;&#125;</span></span><br></pre></td></tr></table></figure><h4 id="ブログの確認"><a href="#ブログの確認" class="headerlink" title="ブログの確認"></a>ブログの確認</h4><p>下記コマンドを実行して表示されたURLへブラウザでアクセスするだけ</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo server</span></span><br></pre></td></tr></table></figure><h4 id="ブログのデプロイ"><a href="#ブログのデプロイ" class="headerlink" title="ブログのデプロイ"></a>ブログのデプロイ</h4><p>gitを利用したdeploy用のプラグインをインストールする</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save --no-optional</span></span><br></pre></td></tr></table></figure><p>下記コマンドを実行してデプロイ<br>(gオプションをつけると静的ファイルをgenereateしてデプロイする)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo deploy -g</span></span><br></pre></td></tr></table></figure><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>ブログ程度の内容であれば、Github Pagesで十分事足りると思いやってみたらHexoがすごく簡単で驚いた。<br>また、vimで記事が書けるのはすごく良い。</p><p><a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a>については簡単すぎて記事では書いていないけれども、下記の記事を参考にするとすぐに導入可能でしたので参考までに</p><p><a href="https://azriton.github.io/2017/02/26/Hexo%E3%81%AB%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84%E3%81%AEDisqus%E3%82%92%E8%A8%AD%E7%BD%AE/" target="_blank" rel="noopener">Hexo に コメント欄 の Disqus を 設置</a></p><h3 id="課題、気になること"><a href="#課題、気になること" class="headerlink" title="課題、気になること"></a>課題、気になること</h3><ul><li>元のmarkdownを<code>hexo deploy</code>でバージョン管理できないのか</li><li>Disqusでコメント機能を入れたが、barbaのpjaxなる機能で記事詳細に行った時に更新しないとDisqusが読み込まれない(修正後themeへ要PR)</li><li>注釈みたいな機能が欲しい(あるか確認してなければ作る)</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;使用したツールなど&quot;&gt;&lt;a href=&quot;#使用したツールなど&quot; class=&quot;headerlink&quot; title=&quot;使用したツールなど&quot;&gt;&lt;/a&gt;使用したツールなど&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="Node.js" scheme="https://i.botch.me/tags/Node-js/"/>
-    
-      <category term="Hexo" scheme="https://i.botch.me/tags/Hexo/"/>
-    
-      <category term="Github Pages" scheme="https://i.botch.me/tags/Github-Pages/"/>
     
   </entry>
   

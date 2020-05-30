@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>CleanCode読書記録〜関数〜 • やったこと</title><meta name="description" content="CleanCode読書記録〜関数〜 - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Robert C. Martin先生のCleanCode第3章を読んだメモ。 関数(第3章)の概要 小さいこと 関数内の処理は20行に達することがほとんどないように書きなさい。 ブロックとインデントも同じ インデントレベルは1つか2つまで     1つのことを行う TO節で表現して1つの抽象レベルが1つの単位 もう一つの方法は、その関数の実装の中から単なる言い換えではなく、別の関数を抽出できるか調">
-<meta name="keywords" content="CleanCode,読書メモ">
+<meta name="keywords" content="読書メモ,CleanCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CleanCode読書記録〜関数〜">
 <meta property="og:url" content="https://i.botch.me/2020/05/25/CleanCode読書記録〜関数〜/index.html">
@@ -173,7 +173,7 @@
 <h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>以前と同じく、わかりみが深い。<br>また、知見としてエラー処理も一つの処理としてtryが最初でcatchが最後とかは、結構悩んでいたポイントなので目からウロコだった。<br>あと、直近でError.java依存性磁石は抱えていた問題だったので、なるほど例外クラスの派生クラスで良いのかというポイントも目からウロコだった。</p>
 <p>DRYに関しては、かなり難しい。<br>同著者のCleanArchitectureでも記載されているように <code>偶然の一致</code> か <code>一致</code> を見分けるのがかなりセンスが必要になるなと感じた。</p>
 <p>あと、コンストラクタの引数が結構増えがちだが、これもオブジェクトにして少なくすべきなのだろうか。。。<br>少なくすることは、技術的には可能だが、結局ネストが増えてデメテルの法則を破りそうでかなり難しいと感じた。</p>
-</div></article></div></main><footer><div class="paginator"><a class="next" href="/2020/05/25/CleanCode読書記録〜意味のある名前〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/05/30/CleanCode〜コメント〜/">prev</a><a class="next" href="/2020/05/25/CleanCode読書記録〜意味のある名前〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
 var disqus_identifier = '2020/05/25/CleanCode読書記録〜関数〜/';
 var disqus_title = 'CleanCode読書記録〜関数〜';
 var disqus_url = 'https://i.botch.me/2020/05/25/CleanCode読書記録〜関数〜/';
