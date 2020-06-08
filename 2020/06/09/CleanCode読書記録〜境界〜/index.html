@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>CleanCode読書記録〜境界〜 • やったこと</title><meta name="description" content="CleanCode読書記録〜境界〜 - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Robert C. Martin先生のCleanCode第8章を読んだメモ。 境界(第8章)の概要 サードバーティーのコードを使用する Mapとかを利用して不要なメソッドを提供するなどをやめよう。 ラップしてインターフェース境界を隠そう インターフェース境界を使うならクラスの中だけ、あるいは、いくつかの強い関連を持ったクラス内での利用に止めよう。 公開APIでこれらを返したり引数で受け取らない。。">
+<meta name="keywords" content="読書メモ,CleanCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CleanCode読書記録〜境界〜">
+<meta property="og:url" content="https://i.botch.me/2020/06/09/CleanCode読書記録〜境界〜/index.html">
+<meta property="og:site_name" content="やったこと">
+<meta property="og:description" content="Robert C. Martin先生のCleanCode第8章を読んだメモ。 境界(第8章)の概要 サードバーティーのコードを使用する Mapとかを利用して不要なメソッドを提供するなどをやめよう。 ラップしてインターフェース境界を隠そう インターフェース境界を使うならクラスの中だけ、あるいは、いくつかの強い関連を持ったクラス内での利用に止めよう。 公開APIでこれらを返したり引数で受け取らない。。">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2020-06-08T17:34:39.766Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CleanCode読書記録〜境界〜">
+<meta name="twitter:description" content="Robert C. Martin先生のCleanCode第8章を読んだメモ。 境界(第8章)の概要 サードバーティーのコードを使用する Mapとかを利用して不要なメソッドを提供するなどをやめよう。 ラップしてインターフェース境界を隠そう インターフェース境界を使うならクラスの中だけ、あるいは、いくつかの強い関連を持ったクラス内での利用に止めよう。 公開APIでこれらを返したり引数で受け取らない。。">
+<meta name="twitter:creator" content="@iBotchME"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="//cdn.rawgit.com/tiaanduplessis/nanoreset/master/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="やったこと"></head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="やったこと"><img class="logo-image" src="/logo.svg" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="https://github.com/ytetsuro" target="_blank">GITHUB</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/atom.xml" target="_self">RSS</a></li></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CleanCode読書記録〜境界〜</h1><a class="twitter-share-button" href="https://i.botch.me/2020/06/09/CleanCode読書記録〜境界〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/CleanCode/">CleanCode</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/読書メモ/">読書メモ</a></li></ul><div class="post-info"><a></a>2020-06-09</div><div class="post-content"><p>Robert C. Martin先生のCleanCode第8章を読んだメモ。</p>
+<h2 id="境界-第8章-の概要"><a href="#境界-第8章-の概要" class="headerlink" title="境界(第8章)の概要"></a>境界(第8章)の概要</h2><ul>
+<li>サードバーティーのコードを使用する<ul>
+<li>Mapとかを利用して不要なメソッドを提供するなどをやめよう。</li>
+<li>ラップしてインターフェース境界を隠そう</li>
+<li>インターフェース境界を使うならクラスの中だけ、あるいは、いくつかの強い関連を持ったクラス内での利用に止めよう。</li>
+<li>公開APIでこれらを返したり引数で受け取らない。。</li>
+</ul>
+</li>
+<li>境界の調査と学習<ul>
+<li>学習テスト(サードパーティーのテストコード)を書いた方が良い</li>
+<li>実装しているアプリケーションの中での使い方がわかる</li>
+<li>サードパーティーのコードの利用方法がわかるので独自でカプセル化することもできるようになるため。</li>
+</ul>
+</li>
+<li>学習テストはタダ以上のもの<ul>
+<li>将来的にサードパーティーが更新されたとしても壊れるかどうかが確認できるようになる。</li>
+<li>学習テストでなくとも、外部との接続テスト(インターフェースを製品のコードと同じように使用してみること)によって、外部との明確な境界を担保すべき。</li>
+</ul>
+</li>
+<li>まだ存在しないコードを使用する。<ul>
+<li>ストラテジパターンを使え</li>
+</ul>
+</li>
+<li>綺麗な境界<ul>
+<li>サードパーティーを利用しているコードをビジネスルールに持たせない。</li>
+<li>自分たちが制御できないものではなく、自分たちが制御できるものに依存した方が良い。</li>
+<li>Mapでラップしたりアダプタパターンなどを利用する。</li>
+<li>これらによりサードパーティーコードの変更による影響点を最小化する。</li>
+</ul>
+</li>
+</ul>
+<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>この章と、前の前の章で言われているデータ構造などの概念を掘り下げたものが、CleanArchtectureへとつながっていくんだなと思った。<br><del>というか、掘り下げていくと必然的にCleanArchitectureのような形になりそう</del><br>学習テストはコストが結構でかめだなと思った。<br>詳細であるサードパーティーのコードのテストよりも、学習テストよりも外部との接続テストぐらいにとどめた方が有用では？とは思った。(ただしチーム内で使い方の共有ができると行った面では有用性は確かにあると思う。)</p>
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/2020/06/09/CleanCode読書記録〜エラー処理〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+var disqus_identifier = '2020/06/09/CleanCode読書記録〜境界〜/';
+var disqus_title = 'CleanCode読書記録〜境界〜';
+var disqus_url = 'https://i.botch.me/2020/06/09/CleanCode読書記録〜境界〜/';
+(function () {
+    var dsq = document.createElement('script'); dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//ytetsuro.disqus.com/count.js" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if (container.querySelector('#disqus_thread') && window.DISQUS) {
+            var title = document.getElementsByTagName('title')[0].textContent;
+            var path  = location.pathname.substr('/'.length);
+            console.log(DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = path;
+                    this.page.url = 'https://i.botch.me/'+path;
+                    this.page.title = title;
+                }
+            }));
+        }
+    })
+})</script><a class="twitter-share-button" href="https://i.botch.me/2020/06/09/CleanCode読書記録〜境界〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><div class="copyright"><p>&copy; 2018 - 2020 <a href="https://ytetsuro.github.io/blog">ytetsuro</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-119327110-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-119327110-1');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>

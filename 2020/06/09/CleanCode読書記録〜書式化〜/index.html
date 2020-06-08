@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>CleanCode読書記録〜書式化〜 • やったこと</title><meta name="description" content="CleanCode読書記録〜書式化〜 - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Robert C. Martin先生のCleanCode第5章を読んだメモ。 書式化(第5章)の概要 書式化の目的 コーディングスタイルのこと 宗教戦争と片付けるべきではない。 現在のちゃんと動くことよりも、将来的に役に立つ書式化の方が重要 保守用異性と拡張性に影響を与え続ける   縦方向の書式化 厳格に定義すべきものではない。 長いよりは短い方が良い。 最大でも200〜500行ぐらいが良い。">
+<meta name="keywords" content="読書メモ,CleanCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CleanCode読書記録〜書式化〜">
+<meta property="og:url" content="https://i.botch.me/2020/06/09/CleanCode読書記録〜書式化〜/index.html">
+<meta property="og:site_name" content="やったこと">
+<meta property="og:description" content="Robert C. Martin先生のCleanCode第5章を読んだメモ。 書式化(第5章)の概要 書式化の目的 コーディングスタイルのこと 宗教戦争と片付けるべきではない。 現在のちゃんと動くことよりも、将来的に役に立つ書式化の方が重要 保守用異性と拡張性に影響を与え続ける   縦方向の書式化 厳格に定義すべきものではない。 長いよりは短い方が良い。 最大でも200〜500行ぐらいが良い。">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2020-06-08T16:18:37.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CleanCode読書記録〜書式化〜">
+<meta name="twitter:description" content="Robert C. Martin先生のCleanCode第5章を読んだメモ。 書式化(第5章)の概要 書式化の目的 コーディングスタイルのこと 宗教戦争と片付けるべきではない。 現在のちゃんと動くことよりも、将来的に役に立つ書式化の方が重要 保守用異性と拡張性に影響を与え続ける   縦方向の書式化 厳格に定義すべきものではない。 長いよりは短い方が良い。 最大でも200〜500行ぐらいが良い。">
+<meta name="twitter:creator" content="@iBotchME"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="//cdn.rawgit.com/tiaanduplessis/nanoreset/master/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="やったこと"></head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="やったこと"><img class="logo-image" src="/logo.svg" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="https://github.com/ytetsuro" target="_blank">GITHUB</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/atom.xml" target="_self">RSS</a></li></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CleanCode読書記録〜書式化〜</h1><a class="twitter-share-button" href="https://i.botch.me/2020/06/09/CleanCode読書記録〜書式化〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/CleanCode/">CleanCode</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/読書メモ/">読書メモ</a></li></ul><div class="post-info"><a></a>2020-06-09</div><div class="post-content"><p>Robert C. Martin先生のCleanCode第5章を読んだメモ。</p>
+<h2 id="書式化-第5章-の概要"><a href="#書式化-第5章-の概要" class="headerlink" title="書式化(第5章)の概要"></a>書式化(第5章)の概要</h2><ul>
+<li>書式化の目的<ul>
+<li>コーディングスタイルのこと</li>
+<li>宗教戦争と片付けるべきではない。</li>
+<li>現在のちゃんと動くことよりも、将来的に役に立つ書式化の方が重要</li>
+<li>保守用異性と拡張性に影響を与え続ける</li>
+</ul>
+</li>
+<li>縦方向の書式化<ul>
+<li>厳格に定義すべきものではない。</li>
+<li>長いよりは短い方が良い。</li>
+<li>最大でも200〜500行ぐらいが良い。</li>
+</ul>
+</li>
+<li>新聞に例える<ul>
+<li>新聞は一番上に見出しがきてどんな内容なのか明らか。</li>
+<li>ソースコードも同じように名前が単純で説明的でなければいけない。</li>
+<li>一番最初のファイルは高レベルの概念とアルゴリズムが書かれているべき。</li>
+<li>ソースファイルの一番下は、最も低レベルの関数と詳細な記述がされている。</li>
+<li>新聞は多くの記事で構成されている。</li>
+<li>もしも新聞が、事実、日付、名前の無秩序な塊で構成されていたら誰も読まない。</li>
+</ul>
+</li>
+<li>垂直概念分離性<ul>
+<li>インポートの宣言、メソッド、パッケージ宣言などの間の改行を意識しなさい。</li>
+<li>これらを垂直分離性と呼びます。</li>
+</ul>
+</li>
+<li>垂直密度<ul>
+<li>ソースコードの各行が強く関連している場合、垂直密度が高い。</li>
+<li>垂直密度は各行の関連性を表す。</li>
+<li>無駄なコメントや、改行で密接な関係を崩さない。</li>
+</ul>
+</li>
+<li>垂直距離<ul>
+<li>密接に関連した概念は垂直方向に近い距離に置く</li>
+<li>相応な強い理由がなければ、関連を持った複数のファイルに分散するべきではない。<ul>
+<li>protectedな変数を避けるべき理由の1つ</li>
+</ul>
+</li>
+<li>変数を宣言するときは、その変数が使用される場所となるべく近い位置で行う。</li>
+<li>ループ内で利用する変数は、ループ内もしくは、ループの直前で宣言する。</li>
+<li>インスタンス変数はクラスの頭で宣言する。<ul>
+<li>うまく設計されたクラスは、全てではないにしても多くのメソッドで利用されるため。</li>
+<li>ハサミの規則はC++で採用されていることもあるが合理性はない。</li>
+<li>メソッドとの間にメンバ変数宣言などがあると、これを見つけるのは困難。</li>
+</ul>
+</li>
+<li>依存関数<ul>
+<li>関数定義は、使われている場所のすぐ後に来ることが期待できる。</li>
+<li>下に下に呼び出していくようにすればモジュール全体を読むのがはるかに簡単になる。</li>
+</ul>
+</li>
+<li>概念の密接な関係<ul>
+<li>使われているすぐ後でなくとも、シンタックスシュガーや、オーバーライドなどは共通の命名体系を持っており、概念上密接な関係になる。</li>
+<li>そのため、近くに置いた方が良い。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>垂直方向の並び順<ul>
+<li>呼び出される側を下に置く。</li>
+<li>モジュールのコードを高いレベルの概念から低いレベルへと流れるようにする。</li>
+</ul>
+</li>
+<li>横方向の書式化<ul>
+<li>行の幅はなるべく短くする。</li>
+<li>昔の80文字ルールは独断が過ぎる。</li>
+<li>100,120でも構わない。</li>
+<li>Robert C. Martin的には120</li>
+</ul>
+</li>
+<li>水平分離性と密度<ul>
+<li>代入演算子の両脇にはスペースを置いて強調する。<ul>
+<li>代入文は左辺と右辺が別々の概念なので。</li>
+</ul>
+</li>
+<li>関数の括弧の間にはスペースを入れない。<ul>
+<li>関数とその引数は強く関連しているため。</li>
+</ul>
+</li>
+<li>演算子の優先順位を強調する目的でもスペースは使える。<ul>
+<li><code>(vertical * horizon * heigth) / 2</code> よりも <code>(vertical*horizon*heigth) / 2</code> などの方が読みやすい場合がある。</li>
+<li>ただし、多くのフォーマッターでは同じスペースを挿入する傾向がある。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>水平方向の位置合わせ<ul>
+<li>アクセス修飾子と変数名のスペースを統一にする的なあれ。</li>
+<li>有用ではない。<ul>
+<li>フォーマッターによって失われる。</li>
+<li>代入演算子などを見逃しがち</li>
+<li>型宣言などを見逃しがち</li>
+</ul>
+</li>
+<li>位置合わせしなければならないほど大きいならファイルを分割した方が良さげ</li>
+</ul>
+</li>
+<li>インデント<ul>
+<li>インデントちゃんとしろ。<ul>
+<li>人間には理解不能になる。</li>
+</ul>
+</li>
+<li>いかに短い関数でインデント規則を破りたくなったとしてもインデントし直しましょう。</li>
+</ul>
+</li>
+<li>ダミーのスコープ<ul>
+<li>while文やfor文の本体がダミーの場合。</li>
+<li>セミコロンを別の行にインデントされると、非常に確認しにくい。</li>
+<li>なるべく避ける</li>
+</ul>
+</li>
+<li>チーム規則<ul>
+<li>自分の書式規則よりもチームの規則に従え</li>
+<li>各人が好き勝手にコードを書いたかに見えるような状態は好ましくない。</li>
+<li>好みと異なっても、チームのメンバーと決めたスタイルに従え。</li>
+</ul>
+</li>
+</ul>
+<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>動くことよりも、書式化の方が重要と考えるあたり、さすがだなと思った。<br>縦方向の書式化については100行ぐらいが好ましいのではないかと個人的には思う。<br>あと、水平方向の位置合わせについては、テストコードのDataProviderは、位置合わせした方が圧倒的に読みやすいとは思う。</p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/06/09/CleanCode読書記録〜オブジェクトとデータ構造〜/">prev</a><a class="next" href="/2020/05/30/CleanCode〜コメント〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+var disqus_identifier = '2020/06/09/CleanCode読書記録〜書式化〜/';
+var disqus_title = 'CleanCode読書記録〜書式化〜';
+var disqus_url = 'https://i.botch.me/2020/06/09/CleanCode読書記録〜書式化〜/';
+(function () {
+    var dsq = document.createElement('script'); dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//ytetsuro.disqus.com/count.js" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if (container.querySelector('#disqus_thread') && window.DISQUS) {
+            var title = document.getElementsByTagName('title')[0].textContent;
+            var path  = location.pathname.substr('/'.length);
+            console.log(DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = path;
+                    this.page.url = 'https://i.botch.me/'+path;
+                    this.page.title = title;
+                }
+            }));
+        }
+    })
+})</script><a class="twitter-share-button" href="https://i.botch.me/2020/06/09/CleanCode読書記録〜書式化〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><div class="copyright"><p>&copy; 2018 - 2020 <a href="https://ytetsuro.github.io/blog">ytetsuro</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-119327110-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-119327110-1');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>
