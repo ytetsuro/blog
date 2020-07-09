@@ -6,7 +6,7 @@
 <meta property="og:site_name" content="やったこと">
 <meta property="og:description" content="Robert C. Martin先生のCleanCode第9章を読んだメモ。 テスト(第9章)の概要 TDD三原則 失敗する単体テストコードを書く前に、製品のコードを書いてはいけない。 コンパイルが通り、適切に失敗する単体テストができるまでは、次のテストを書いてはいけない 現在失敗している単体テストが通るまで、次の製品コードを書いてはいけない。   テストを綺麗に保つ 汚いテストはテストを持たない">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2020-07-09T14:42:38.840Z">
+<meta property="og:updated_time" content="2020-07-09T14:58:39.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CleanCode読書記録〜テスト〜">
 <meta name="twitter:description" content="Robert C. Martin先生のCleanCode第9章を読んだメモ。 テスト(第9章)の概要 TDD三原則 失敗する単体テストコードを書く前に、製品のコードを書いてはいけない。 コンパイルが通り、適切に失敗する単体テストができるまでは、次のテストを書いてはいけない 現在失敗している単体テストが通るまで、次の製品コードを書いてはいけない。   テストを綺麗に保つ 汚いテストはテストを持たない">
@@ -115,7 +115,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>テストはないよりは、読みにくくてもあった方がマシだとは思っている派なので、テストを持たないのと同値は言い過ぎだと思った。<br>関数でassertや実行をまとめるのは、目から鱗ではあった。(いっぱいassert書いてた。。。)</p>
+<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>テストはないよりは、読みにくくてもあった方がマシだとは思っている派なので、テストを持たないのと同値は言い過ぎだと思った。<br>関数でassertや実行をまとめるのは、目から鱗ではあった。(いっぱいassert書いてた。。。)<br>本書には、TDD三原則<br>として <code>現在失敗している単体テストが通るまで、次の製品コードを書いてはいけない。</code> とあるが、誤訳ではないかと思う。</p>
+<p><a href="http://www.butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd" target="_blank" rel="noopener">Robert C. Martinのブログ</a> では以下のように書かれており、本書の言葉とは異なる。</p>
+<ol>
+<li>You are not allowed to write any production code unless it is to make a failing unit test pass.</li>
+<li>You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.</li>
+<li>You are not allowed to write any more production code than is sufficient to pass the one failing unit test.</li>
+</ol>
+<p>厳密には、<code>失敗するテストを通すためのプロダクトコード以外を書かない</code> ではないかと。(Clean Codeの英文の書籍は持っていないから翻訳が間違っているのか、Bobおじさんの考え方が変わったかどうかはわからないけど。。。)</p>
 </div></article></div></main><footer><div class="paginator"><a class="next" href="/2020/06/09/CleanCode読書記録〜境界〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
 var disqus_identifier = '2020/07/09/CleanCode読書記録〜テスト〜/';
 var disqus_title = 'CleanCode読書記録〜テスト〜';
