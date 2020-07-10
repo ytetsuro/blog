@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>CleanCode読書記録〜クラス〜 • やったこと</title><meta name="description" content="CleanCode読書記録〜クラス〜 - ytetsuro"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Robert C. Martin先生のCleanCode第10章を読んだメモ。 クラス(第10章)の概要 クラスの構成 変数定義から書く Robert C. Martin的には以下の順番 public static private static private publicは避ける public関数 private関数     このようにすると新聞のように詳細が下に来やすくなる。   カプセル化">
+<meta name="keywords" content="読書メモ,CleanCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CleanCode読書記録〜クラス〜">
+<meta property="og:url" content="https://i.botch.me/2020/07/11/CleanCode読書記録〜クラス〜/index.html">
+<meta property="og:site_name" content="やったこと">
+<meta property="og:description" content="Robert C. Martin先生のCleanCode第10章を読んだメモ。 クラス(第10章)の概要 クラスの構成 変数定義から書く Robert C. Martin的には以下の順番 public static private static private publicは避ける public関数 private関数     このようにすると新聞のように詳細が下に来やすくなる。   カプセル化">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2020-07-10T16:36:50.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CleanCode読書記録〜クラス〜">
+<meta name="twitter:description" content="Robert C. Martin先生のCleanCode第10章を読んだメモ。 クラス(第10章)の概要 クラスの構成 変数定義から書く Robert C. Martin的には以下の順番 public static private static private publicは避ける public関数 private関数     このようにすると新聞のように詳細が下に来やすくなる。   カプセル化">
+<meta name="twitter:creator" content="@iBotchME"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="//cdn.rawgit.com/tiaanduplessis/nanoreset/master/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="やったこと"></head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="やったこと"><img class="logo-image" src="/logo.svg" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="https://github.com/ytetsuro" target="_blank">GITHUB</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/atom.xml" target="_self">RSS</a></li></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CleanCode読書記録〜クラス〜</h1><a class="twitter-share-button" href="https://i.botch.me/2020/07/11/CleanCode読書記録〜クラス〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/CleanCode/">CleanCode</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/読書メモ/">読書メモ</a></li></ul><div class="post-info"><a></a>2020-07-11</div><div class="post-content"><p>Robert C. Martin先生のCleanCode第10章を読んだメモ。</p>
+<h2 id="クラス-第10章-の概要"><a href="#クラス-第10章-の概要" class="headerlink" title="クラス(第10章)の概要"></a>クラス(第10章)の概要</h2><ul>
+<li>クラスの構成<ul>
+<li>変数定義から書く<ul>
+<li>Robert C. Martin的には以下の順番<ul>
+<li>public static</li>
+<li>private static</li>
+<li>private</li>
+<li>publicは避ける</li>
+<li>public関数</li>
+<li>private関数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>このようにすると新聞のように詳細が下に来やすくなる。</li>
+</ul>
+</li>
+<li>カプセル化<ul>
+<li>privateに固執するわけではなく、テストを優先に考えている。<ul>
+<li>protectedにしたり、パッケージスコープに入れることも考える。</li>
+</ul>
+</li>
+<li>カプセル化を緩めるのは最後の手段</li>
+</ul>
+</li>
+<li>クラスを小さくしなければならない<ul>
+<li>とにかく小さくする。</li>
+<li>クラスは、行数ではなく責務の数で小さくする。</li>
+<li>メソッド数が少なくても責務が多すぎると良くない。</li>
+<li>名付けでメソッドやクラスの責務を明確にする。<ul>
+<li>Processer,Manager,Superなどの曖昧な名前は責務が不当になっているサイン</li>
+</ul>
+</li>
+<li>クラスの責務を説明説明しようとした時に、「もし」「そして」「あるいは」「しかし」などの単語以外の単語を使って25語以内で説明できるようにする。<ul>
+<li>説明の中に「そして」が出てきたら、責務を持ちすぎているサイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>単一責任原則<ul>
+<li>OOPの概念で最も重要なものの1つ</li>
+<li>そして、もっとも無視されがちな原則の一つ</li>
+<li>変更の原因となるものが1つでなければいけない。</li>
+<li>プログラミングの活動においても重要。<ul>
+<li>プログラムが動作するようになった時点で、洗練するという別の関心ごとへ移ることに失敗しがち</li>
+<li>小さなクラスがいっぱいあって、全体を見失うことを恐れている場合もある。</li>
+<li>大きなクラスよりは小さなクラスの方が、可動部分が少ないため、気軽にコードをなげこめるようになる。</li>
+<li>大きなクラスの場合、理解しなくても良い部分まで調べることになってしまう。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>凝集性<ul>
+<li>限られたインスタンス変数を持つべき。</li>
+<li>クラス内のメソッドは1つ以上の変数を操作する。</li>
+<li>全変数が全メソッドに使用されるクラスは凝集性が最大限に高い。<ul>
+<li>最大限にせよというのは実現可能でもないし、有用でもない。</li>
+<li>だが、凝集性を高める必要はある。</li>
+</ul>
+</li>
+<li>関数を小さくし、引数リストを短くするという鉄則につながる。</li>
+<li>あるメソッド群で使用されるインスタンス変数の急増に繋がった場合、クラスを分割できるサイン</li>
+</ul>
+</li>
+<li>凝集性に気を配ると、大量の小さなクラスが生まれる。<ul>
+<li>大量の引数に依存している大きな関数があった場合、気軽にインスタンス変数にして引数を減らす選択だと凝集度が下がりがち。</li>
+<li>小さなクラスを大量に作って凝集度を高めると良い。</li>
+<li>これにより、責務が区切られやすくなり、気軽に変更ができるようになる。</li>
+<li>表現が豊かな変数名を与えられる。currentUserName -&gt; User.nameなどだと思われる。</li>
+<li>コードの解説が、関数とクラスの宣言を利用できる。</li>
+<li>ソースが見やすくなり、書式化の技法を用いることが容易。</li>
+</ul>
+</li>
+<li>変更のために最適化する。<ul>
+<li>洗練されたシステムでは、クラスは変更に対するリスクが最低限になるように構成されている。</li>
+<li>OCPを意識して、新規機能が既存システムの拡張のみで実現されるようにすることで、既存にシステムに変更を及ぼさないようになる。</li>
+</ul>
+</li>
+<li>変更から切り離す。<ul>
+<li>詳細な具象クラスではなく、抽象に依存することで変更を切り離すことができるようになる。(DIP)</li>
+<li>具象クラスへ依存しているとテストがしづらくなる。</li>
+<li>こうすることで、柔軟性が高まり再利用がより簡単にできるようになる。</li>
+</ul>
+</li>
+</ul>
+<h2 id="感じたこと"><a href="#感じたこと" class="headerlink" title="感じたこと"></a>感じたこと</h2><p>SRPが何を指すかは体感するのに非常に苦労をした覚えがある。<br>確かに説明する時に「そして」が出てきたら、責務違反のサインは他人に伝えやすいなと思った。<br>ただ、モデリングを誤るとよくわからない責務のクラスができがちな印象を持っているので結構バランスが難しいと今でも感じている。</p>
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/2020/07/09/CleanCode読書記録〜テスト〜/">next</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'ytetsuro';
+var disqus_identifier = '2020/07/11/CleanCode読書記録〜クラス〜/';
+var disqus_title = 'CleanCode読書記録〜クラス〜';
+var disqus_url = 'https://i.botch.me/2020/07/11/CleanCode読書記録〜クラス〜/';
+(function () {
+    var dsq = document.createElement('script'); dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//ytetsuro.disqus.com/count.js" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if (container.querySelector('#disqus_thread') && window.DISQUS) {
+            var title = document.getElementsByTagName('title')[0].textContent;
+            var path  = location.pathname.substr('/'.length);
+            console.log(DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = path;
+                    this.page.url = 'https://i.botch.me/'+path;
+                    this.page.title = title;
+                }
+            }));
+        }
+    })
+})</script><a class="twitter-share-button" href="https://i.botch.me/2020/07/11/CleanCode読書記録〜クラス〜/" data-show-count="false">Tweet</a><a class="hatena-bookmark-button" href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script><script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, container, newPageRawHTML) {
+        if(window.twttr && container.querySelector('.twitter-share-button')) {
+           twttr.widgets.load()
+        }
+        if (window.Hatena && container.querySelector('.hatena-bookmark-button')) {
+           Hatena.Bookmark.BookmarkButton.setup();
+        }
+    })
+})</script><div class="copyright"><p>&copy; 2018 - 2020 <a href="https://ytetsuro.github.io/blog">ytetsuro</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-119327110-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-119327110-1');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>
